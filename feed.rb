@@ -111,4 +111,30 @@ class Feed
     @feed = output_feed
     self
   end
+  
+  def truncate(max_size)
+    output_feed = RSS::Maker.make("2.0") do |output_feed|
+      output_feed.channel.about = 'http://hoge/rss.xml'
+      output_feed.channel.title = "hoge"
+      output_feed.channel.description = "hoge.description"
+      output_feed.channel.link = "http://hoge.link"
+      output_feed.channel.language = "ja"
+      
+      output_feed.items.do_sort = true
+      output_feed.items.max_size = max_size
+      
+      feed = @feed
+      feed.items.each do |feed_item|
+        i= output_feed.items.new_item
+        i.title       = feed_item.title
+        i.link        = feed_item.link
+        i.description = feed_item.description
+        i.date        = feed_item.date
+      end
+    end
+    
+    @feed = output_feed
+    self
+  end
+    
 end
