@@ -1,0 +1,3 @@
+DEBUG_UNION = true
+DEBUG_UNIQUE = true
+DEBUG_ITEMS = true
