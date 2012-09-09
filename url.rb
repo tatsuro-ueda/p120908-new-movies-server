@@ -1,3 +1,5 @@
+require 'CGI'
+
 class URL
   def initialize(base, directories = nil, queries = nil)
     @base = base
@@ -23,11 +25,11 @@ class URL
     end
     
     if @queries
-      @path += ('?' + @queries[0]['key'] + '=' + @queries[0]['value'].to_s)
+      @path += ('?' + @queries[0]['key'] + '=' + CGI.escapeHTML(@queries[0]['value'].to_s))
       @queries.shift
       if @queries.size > 0
         @queries.each do |query|
-          @path += ('&' + query['key'] + '=' + query['value'].to_s)
+          @path += ('&' + query['key'] + '=' + CGI.escapeHTML(query['value'].to_s))
         end
       end
     end

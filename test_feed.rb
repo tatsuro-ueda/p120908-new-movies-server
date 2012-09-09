@@ -15,7 +15,16 @@ class FeedTest < Test::Unit::TestCase
       {'key' => 'of', 'value' => 40},
       {'key' => 'mode', 'value' => 'rss'}]
     url = URL.new(base, directories, queries)
-    @feed = Feed.new(url)
+    @feed1 = Feed.new(url)
+    @feed1 = @feed1.truncate(5)
+    
+    tag = '技術'
+    base = 'www.nicovideo.jp'
+    directories = ['tag', tag]
+    queries = [{'key' => 'rss', 'value' => '2.0'}]
+    url = URL.new(base, directories, queries)
+    @feed2 = Feed.new(url)
+    @feed2 = @feed2.truncate(5)
   end
   
   #各テストメソッドが呼ばれた後に呼ばれるメソッド
@@ -24,18 +33,21 @@ class FeedTest < Test::Unit::TestCase
   end
   
   def test_initialize
-    actual = @feed.to_s
+    actual = @feed1.to_s
     assert actual.length > 0, "length = #{actual.length}"
   end
   
   def test_items
-    actual = @feed.items
-    assert actual.size > 0
+    actual = @feed1.items
+    assert actual.size == 5
   end
   
   def test_append
-    actual = @feed.append(@feed)
-    assert actual.items.size > 0
+    actual = @feed1.append(@feed2)
+    for i in 0..9 do
+      puts actual.items[i].date
+    end
+    assert actual.items.size == 10
   end
   
   # def test_unique
@@ -43,8 +55,8 @@ class FeedTest < Test::Unit::TestCase
   #   assert actual.items.size > 0
   # end
   
-  def test_truncate
-    actual = @feed.truncate(5)
-    assert actual.items.size == 5
-  end
+  # def test_truncate
+  #   actual = @feed1.append(@feed2).truncate(5)
+  #   assert actual.items.size == 5
+  # end
 end

@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'url'
+require './url'
 
 class URLTest < Test::Unit::TestCase
   # 各テストケースが呼ばれる前に呼ばれるメソッド

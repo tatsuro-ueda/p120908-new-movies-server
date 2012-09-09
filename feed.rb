@@ -71,7 +71,7 @@ class Feed
         feed.items.each do |feed_item|
           i= output_feed.items.new_item            
           i.title = feed_item.title
-          puts "#{i.title}を追加しました" if DEBUG_UNION
+          puts "＜#{i.title}＞を追加しました" if DEBUG_UNION
           i.link = feed_item.link
           i.description = feed_item.description
           i.date = feed_item.date
