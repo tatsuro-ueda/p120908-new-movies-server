@@ -5,9 +5,7 @@ require './url'
 require './const'
 
 class FeedTest < Test::Unit::TestCase
-  # 各テストケースが呼ばれる前に呼ばれるメソッド
-  def setup
-#    puts '新しいテストを開始します'
+  def setup_feed1
     tag = 'technology'
     base = 'b.hatena.ne.jp'
     directories = ['search', 'tag']
@@ -16,8 +14,10 @@ class FeedTest < Test::Unit::TestCase
       {'key' => 'mode', 'value' => 'rss'}]
     url = URL.new(base, directories, queries)
     @feed1 = Feed.new(url)
-    @feed1 = @feed1.truncate(5)
-    
+    # @feed1 = @feed1.truncate(5)
+  end    
+  
+  def setup_feed2
     tag = '技術'
     base = 'www.nicovideo.jp'
     directories = ['tag', tag]
@@ -25,7 +25,9 @@ class FeedTest < Test::Unit::TestCase
     url = URL.new(base, directories, queries)
     @feed2 = Feed.new(url)
     @feed2 = @feed2.truncate(5)
-
+  end
+  
+  def setup_feed3
     tag = '技術'
     base = 'b.hatena.ne.jp'
     directories = ['search', 'tag']
@@ -33,8 +35,13 @@ class FeedTest < Test::Unit::TestCase
       {'key' => 'of', 'value' => 40},
       {'key' => 'mode', 'value' => 'rss'}]
     url = URL.new(base, directories, queries)
-    @feed3 = Feed.new(url)
-    @feed3 = @feed1.truncate(5)
+    @feed4 = Feed.new(url)
+    @feed3 = @feed4.truncate(5)
+  end
+  
+  # 各テストケースが呼ばれる前に呼ばれるメソッド
+  def setup
+#    puts '新しいテストを開始します'
   end
   
   #各テストメソッドが呼ばれた後に呼ばれるメソッド
@@ -42,47 +49,69 @@ class FeedTest < Test::Unit::TestCase
 #    puts 'テストを1つ終了しました'
   end
   
-  def test_initialize
-    actual = @feed1.to_s
-    assert actual.length > 0, "length = #{actual.length}"
-  end
+  # def test_initialize
+  #   setup_feed3
+  #   actual = @feed4
+  #   puts @feed4
+  #   assert actual.items.length > 0
+  # end
+  # 
+  # def test_items
+  #   actual = @feed1.items
+  #   puts actual.to_s if DEBUG_UNIQUE
+  #   assert actual.size == 5
+  # end
+  # 
+  # def test_append
+  #   actual = @feed1.append(@feed3)
+  #   if DEBUG_APPEND
+  #     for i in 0..9 do
+  #       puts actual.items[i].title
+  #     end
+  #   end
+  #   assert actual.items.size == 10
+  # end
+  # 
+  # def test_unique
+  #   actual = @feed1.append(@feed3).unique
+  #   puts actual.to_s if DEBUG_UNIQUE
+  #   assert actual.items.size == 5
+  # end
+  # 
+  # def test_truncate
+  #   actual = @feed1.append(@feed2).truncate(5)
+  #   assert actual.items.size == 5
+  # end
   
-  def test_items
-    actual = @feed1.items
-    puts actual.to_s if DEBUG_UNIQUE
-    assert actual.size == 5
-  end
+  # def test_regex
+  #   actual = @feed2.regex([
+  #     {:find => /<p class="nico-thumbnail"><img alt=".*\n/, 
+  #       :replace => ''},
+  #     {:find => /<p class="nico-description">/,
+  #       :replace => ''},
+  #     {:find => /<\/p>/,
+  #       :replace => ''},
+  #     {:find => /<p class="nico-info">.*\n/,
+  #       :replace => ''}
+  #     ])
+  #   if DEBUG_REGEX
+  #     for i in 0..4 do
+  #       puts actual.items[i].description
+  #     end
+  #   end
+  #   assert actual.items.size == 5
+  # end
   
-  def test_append
-    actual = @feed1.append(@feed3)
-    if DEBUG_APPEND
-      for i in 0..9 do
-        puts actual.items[i].title
+  def test_filter
+    setup_feed3
+    actual = @feed3.filter({
+      'title' => ["プロジェクト", "IT", "ニュース"], 
+      'link' => ["itmedia", "yomiuri", "mainichi"]})
+    if DEBUG_FILTER
+      for i in 0..(actual.items.size - 1)
+        puts actual.items[i].title + ': ' + actual.items[i].link
       end
     end
-    assert actual.items.size == 10
-  end
-  
-  def test_unique
-    actual = @feed1.append(@feed3).unique
-    puts actual.to_s if DEBUG_UNIQUE
-    assert actual.items.size == 5
-  end
-  
-  def test_truncate
-    actual = @feed1.append(@feed2).truncate(5)
-    assert actual.items.size == 5
-  end
-  
-  def test_regex
-    actual = @feed2.regex({
-      :find => /<p class="nico-thumbnail"><img alt=".*/, 
-      :replace => ''})
-    if DEBUG_REGEX
-      for i in 0..4 do
-        puts actual.items[i].description
-      end
-    end
-    assert actual.items.size == 5
+    assert actual.items.size > 0
   end
 end

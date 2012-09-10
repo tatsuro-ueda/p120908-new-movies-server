@@ -135,7 +135,11 @@ class Feed
         i= output_feed.items.new_item
         i.title       = item.title
         i.link        = item.link
-        i.description = item.description.sub(arg[:find], arg[:replace])
+        desc = item.description
+        for j in 0..(arg.size - 1)
+          desc = desc.sub(arg[j][:find], arg[j][:replace])
+        end
+        i.description = desc
         i.date        = item.date
       end
     end
@@ -144,4 +148,28 @@ class Feed
     self
   end
   
+  def filter(arg)
+    output_feed = RSS::Maker.make("2.0") do |output_feed|
+      create_sample_feed(output_feed)
+      output_feed.items.do_sort = true
+      feed = @feed
+      items.each do |item|
+        if arg['title']
+          arg['title'].each do |keyword|
+            if item.title.include?(keyword)
+              add_new_item(item, output_feed)
+              break
+            end
+          end
+        elsif arg['link']
+          arg['link'].each do |keyword|
+            if item.link.include?(keyword)
+              add_new_item(item, output_feed)
+              break
+            end
+          end
+        end
+      end
+    end
+  end
 end

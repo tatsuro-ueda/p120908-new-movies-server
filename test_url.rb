@@ -37,6 +37,17 @@ class URLTest < Test::Unit::TestCase
   def test_path
     expected = '/search/tag?q=technology&of=40'
     actual = @url.path
-    assert expected == actual, "actual = #{actual}" 
+    assert expected == actual, "actual = #{actual}"
+    
+    expected = '/search/tag?q=%E6%8A%80%E8%A1%93&of=40&mode=rss'
+    tag = '技術'
+    base = 'b.hatena.ne.jp'
+    directories = ['search', 'tag']
+    queries = [{'key' => 'q', 'value' => tag},
+      {'key' => 'of', 'value' => 40},
+      {'key' => 'mode', 'value' => 'rss'}]
+    url = URL.new(base, directories, queries)
+    puts url.path
+    actual = url.path
   end   
 end
