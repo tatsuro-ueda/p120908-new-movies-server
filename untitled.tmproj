@@ -28,7 +28,7 @@
 				<key>column</key>
 				<integer>18</integer>
 				<key>line</key>
-				<integer>2</integer>
+				<integer>4</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -40,69 +40,39 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>17</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>73</integer>
+				<integer>132</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>59</integer>
+			<integer>107</integer>
 		</dict>
 		<key>test_feed.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>31</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>47</integer>
+				<integer>80</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>12</integer>
-		</dict>
-		<key>test_url.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>11</integer>
-				<key>line</key>
-				<integer>1</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>9</integer>
-		</dict>
-		<key>url.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>82</integer>
-				<key>line</key>
-				<integer>31</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>6</integer>
+			<integer>54</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>test_feed.rb</string>
-		<string>url.rb</string>
-		<string>test_url.rb</string>
 		<string>feed.rb</string>
 		<string>const.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{66, 26}, {645, 705}}</string>
+	<string>{{66, 26}, {529, 705}}</string>
 </dict>
 </plist>

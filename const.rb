@@ -1,3 +1,5 @@
-DEBUG_UNION = true
-DEBUG_UNIQUE = true
-DEBUG_ITEMS = true
+DEBUG_UNION = false
+DEBUG_UNIQUE = false
+DEBUG_ITEMS = false
+DEBUG_APPEND = false
+DEBUG_REGEX = true

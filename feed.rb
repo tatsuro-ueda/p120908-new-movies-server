@@ -14,6 +14,34 @@ class Feed
     self
   end
   
+  def add_new_item(item, output_feed)
+    i= output_feed.items.new_item
+    i.title       = item.title
+    i.link        = item.link
+    i.description = item.description
+    i.date        = item.date
+  end
+
+  def add_new_items(items, output_feed)
+    items.each do |feed_item|
+      add_new_item(feed_item, output_feed)
+    end
+  end
+
+  def create_new_feed(feed, about, title, description, link, language = 'ja') 
+    feed.channel.about = about
+    feed.channel.title = title
+    feed.channel.description = description
+    feed.channel.link = link
+    feed.channel.language = language
+  end
+  
+  def create_sample_feed(output_feed)
+    create_new_feed(
+      output_feed, 'http://hoge/rss.xml', "hoge", 
+      "hoge.description", "http://hoge.link")
+  end
+  
   def to_s
     @feed.to_s
   end
@@ -24,32 +52,12 @@ class Feed
 
   def append(*appended_feeds)
     output_feed= RSS::Maker.make("2.0") do |output_feed|
-      output_feed.channel.about = 'http://hoge/rss.xml'
-      output_feed.channel.title = "hoge"
-      output_feed.channel.description = "hoge.description"
-      output_feed.channel.link = "http://hoge.link"
-      output_feed.channel.language = "ja"
-      
+      create_sample_feed(output_feed)
       output_feed.items.do_sort = true
-
-      @feed.items.each do |feed_item|
-        i= output_feed.items.new_item            
-        i.title = feed_item.title
-        puts "#{i.title}を追加しました" if DEBUG_UNION
-        i.link = feed_item.link
-        i.description = feed_item.description
-        i.date = feed_item.date
-      end
+      add_new_items(@feed.items, output_feed)
     
       appended_feeds.each do |feed|
-        feed.items.each do |feed_item|
-          i= output_feed.items.new_item            
-          i.title = feed_item.title
-          puts "#{i.title}を追加しました" if DEBUG_UNION
-          i.link = feed_item.link
-          i.description = feed_item.description
-          i.date = feed_item.date
-        end
+        add_new_items(feed.items, output_feed)
       end
     end
     @feed = output_feed
@@ -59,82 +67,81 @@ class Feed
   # うまく動かない
   def Feed.union(*appended_feeds)
     output_feed= RSS::Maker.make("2.0") do |output_feed|
-      output_feed.channel.about = 'http://hoge/rss.xml'
-      output_feed.channel.title = "hoge"
-      output_feed.channel.description = "hoge.description"
-      output_feed.channel.link = "http://hoge.link"
-      output_feed.channel.language = "ja"
-      
+      create_sample_feed(output_feed)
       output_feed.items.do_sort = true
 
       appended_feeds.each do |feed|
         feed.items.each do |feed_item|
-          i= output_feed.items.new_item            
-          i.title = feed_item.title
-          puts "＜#{i.title}＞を追加しました" if DEBUG_UNION
-          i.link = feed_item.link
-          i.description = feed_item.description
-          i.date = feed_item.date
+          add_new_items(feed.items, output_feed)
         end
       end
     end
     @feed = output_feed
+    self
   end
   
   def unique
     output_feed = RSS::Maker.make("2.0") do |output_feed|
-      output_feed.channel.about = 'http://hoge/rss.xml'
-      output_feed.channel.title = "hoge"
-      output_feed.channel.description = "hoge.description"
-      output_feed.channel.link = "http://hoge.link"
-      output_feed.channel.language = "ja"
-      
+      create_sample_feed(output_feed)
       output_feed.items.do_sort = true
       
       feed = @feed
-      for i in 0...(feed.items.size - 1) do
-        for j in 0...(i - 1)
-          if feed.items[j].link == feed.items[i].link
-            break;
+      for m in 0..(feed.items.size - 1) do
+        if m == 0
+          add_new_item(feed.items[m], output_feed)
+          puts "#{feed.items[m].link} を最初に追加しました。" if DEBUG_UNIQUE
+        else
+          skip_this_feed = false
+          for n in 0..(m - 1)
+            if feed.items[m].link == feed.items[n].link
+              skip_this_feed = true
+              puts 'same link was found' if DEBUG_UNIQUE
+              break;
+            else
+              puts 'not same link' if DEBUG_UNIQUE
+            end
+          end
+          puts 'comparison check ended' if DEBUG_UNIQUE
+          unless skip_this_feed
+            add_new_item(feed.items[m], output_feed)
+            puts "m = #{m}: #{feed.items[m].link} を追加しました。" if DEBUG_UNIQUE
           end
         end
-        feed.items.each do |feed_item|
-          i= output_feed.items.new_item
-          i.title       = feed_item.title
-          i.link        = feed_item.link
-          i.description = feed_item.description
-          i.date        = feed_item.date
-        end
       end
-    end
-    
+    end # RSS::Maker
     @feed = output_feed
     self
   end
   
   def truncate(max_size)
     output_feed = RSS::Maker.make("2.0") do |output_feed|
-      output_feed.channel.about = 'http://hoge/rss.xml'
-      output_feed.channel.title = "hoge"
-      output_feed.channel.description = "hoge.description"
-      output_feed.channel.link = "http://hoge.link"
-      output_feed.channel.language = "ja"
-      
+      create_sample_feed(output_feed)
       output_feed.items.do_sort = true
       output_feed.items.max_size = max_size
-      
       feed = @feed
-      feed.items.each do |feed_item|
-        i= output_feed.items.new_item
-        i.title       = feed_item.title
-        i.link        = feed_item.link
-        i.description = feed_item.description
-        i.date        = feed_item.date
-      end
+      add_new_items(feed.items, output_feed)
     end
     
     @feed = output_feed
     self
   end
-    
+  
+  def regex(arg)
+    output_feed = RSS::Maker.make("2.0") do |output_feed|
+      create_sample_feed(output_feed)
+      output_feed.items.do_sort = true
+      feed = @feed
+      items.each do |item|
+        i= output_feed.items.new_item
+        i.title       = item.title
+        i.link        = item.link
+        i.description = item.description.sub(arg[:find], arg[:replace])
+        i.date        = item.date
+      end
+    end
+
+    @feed = output_feed
+    self
+  end
+  
 end
