@@ -171,5 +171,7 @@ class Feed
         end
       end
     end
+    @feed = output_feed
+    self
   end
 end

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>test_feed.rb</string>
+	<string>app.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -21,54 +21,85 @@
 	<integer>200</integer>
 	<key>metaData</key>
 	<dict>
-		<key>const.rb</key>
+		<key>app.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
+				<integer>14</integer>
 				<key>line</key>
-				<integer>4</integer>
+				<integer>43</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>24</integer>
 		</dict>
 		<key>feed.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>132</integer>
+				<integer>175</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>107</integer>
+			<integer>0</integer>
 		</dict>
 		<key>test_feed.rb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>10</integer>
 				<key>line</key>
-				<integer>80</integer>
+				<integer>95</integer>
+			</dict>
+			<key>columnSelection</key>
+			<false/>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>84</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>18</integer>
+				<key>line</key>
+				<integer>85</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>95</integer>
+			</dict>
+		</dict>
+		<key>url.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>12</integer>
+				<key>line</key>
+				<integer>28</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>54</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>test_feed.rb</string>
+		<string>app.rb</string>
+		<string>url.rb</string>
 		<string>feed.rb</string>
-		<string>const.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
