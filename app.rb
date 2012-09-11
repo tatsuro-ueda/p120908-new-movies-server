@@ -46,13 +46,14 @@ end
 
 get '/new_movie' do
   feed_hatena1 = feed_hatena(params['tag1'])
-  feed_hatena2 = feed_hatena(params['tag2'])
+  feed_hatena2 = feed_hatena(params['tag2'])　if params['tag2']
   feed_nico = feed_nico(params['tag1'])
-  feed_vimeo = feed_vimeo(params['tag2'])
-  feed = feed_hatena1.append(
-    feed_hatena2, feed_nico, feed_vimeo).
-    unique
-  # feed = feed_vimeo
+  feed_vimeo = feed_vimeo(params['tag2'])　if params['tag2']
+  if params['tag2']
+    feed = feed_hatena1.append(
+      feed_hatena2, feed_nico, feed_vimeo).
+      unique
+  else feed = feed_hatena1.append(feed_nico).unique
   content_type = 'text/xml; charset=utf-8'
   feed.to_s
 end
