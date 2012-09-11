@@ -39,21 +39,21 @@ def feed_vimeo(tag)
   base = 'vimeo.com'
   directories = ['tag:' + tag, 'rss']
   url = URL.new(base, directories)
-  p url.host + url.path
-  feed = Feed.new(url).
-    truncate(5)
+  # p url.host + url.path
+  feed = Feed.new(url).truncate(5)
 end
 
 get '/new_movie' do
   feed_hatena1 = feed_hatena(params['tag1'])
   if params['tag2']
     feed_hatena2 = feed_hatena(params['tag2'])
-    feed_vimeo = feed_vimeo(params['tag2'])
+    # feed_vimeo = feed_vimeo(params['tag2'])
   end
   feed_nico = feed_nico(params['tag1'])
   if params['tag2']
     feed = feed_hatena1.append(
-      feed_hatena2, feed_nico, feed_vimeo).
+      # feed_hatena2, feed_nico, feed_vimeo).
+      feed_hatena2, feed_nico).
       unique
   else
     feed = feed_hatena1.append(feed_nico).unique
