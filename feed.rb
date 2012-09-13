@@ -10,7 +10,11 @@ class Feed
     host = url.host
     path = url.path
     feed = Net::HTTP.get(host, path).force_encoding('utf-8')
-    @feed = RSS::Parser.parse(feed)
+    begin
+      @feed = RSS::Parser.parse(feed)
+    rescue RSS::InvalidRSSError
+      @feed = RSS::Parser.parse(feed, false )
+    end
     self
   end
   
