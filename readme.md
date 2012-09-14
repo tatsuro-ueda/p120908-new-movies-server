@@ -15,7 +15,7 @@
 - const.rb  
   デバッグ用のファイルです
 - **feed.rb**  
-  17 Feedクラスを定義しています
+  Feedクラスを定義しています
 - readme.md  
   このファイルです
 - test_feed.rb  
