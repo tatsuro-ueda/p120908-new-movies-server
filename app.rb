@@ -39,26 +39,32 @@ def feed_vimeo(tag)
   base = 'vimeo.com'
   directories = ['tag:' + tag, 'rss']
   url = URL.new(base, directories)
-  feed = Feed.new(url).regex([
+  feed = Feed.new(url).
+  regex([
       {:find => /.*/, :replace => ''}
-      ]).truncate(5)
+      ]).
+      truncate(5)
 end
 
 get '/new_movie' do
   feed_hatena1 = feed_hatena(params['tag1'])
-  if params['tag2']
+  feed_nico = feed_nico(params['tag1'])
+  unless params['tag2']
+    feed = feed_hatena1.append(feed_nico).unique
+  else
     feed_hatena2 = feed_hatena(params['tag2'])
     feed_vimeo = feed_vimeo(params['tag2'])
-  end
-  feed_nico = feed_nico(params['tag1'])
-  if params['tag2']
     feed = feed_hatena1.append(
       feed_hatena2, feed_nico, feed_vimeo).
       # feed_hatena2, feed_nico).
       unique
-  else
-    feed = feed_hatena1.append(feed_nico).unique
   end
+  content_type = 'text/xml; charset=utf-8'
+  feed.to_s
+end
+
+get '/vimeo_military' do
+  feed = feed_vimeo('military')
   content_type = 'text/xml; charset=utf-8'
   feed.to_s
 end
