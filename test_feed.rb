@@ -127,5 +127,5 @@ class FeedTest < Test::Unit::TestCase
       end
     end
     assert actual.items.size > 0
-  end
+  end    
 end
