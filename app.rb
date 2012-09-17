@@ -40,10 +40,10 @@ def feed_vimeo(tag)
   directories = ['tag:' + tag, 'rss']
   url = URL.new(base, directories)
   feed = Feed.new(url).
-  regex([
+    regex([
       {:find => /.*/, :replace => ''}
-      ]).
-      truncate(5)
+    ]).
+    truncate(5)
 end
 
 get '/new_movie' do
