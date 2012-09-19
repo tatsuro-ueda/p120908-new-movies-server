@@ -83,8 +83,5 @@ get '/new_movie' do
   feed.to_s
 end
 
-get '/vimeo_military' do
-  feed = feed_vimeo('military')
-  content_type = 'text/xml; charset=utf-8'
-  feed.to_s
+get '/index.html' do
 end
