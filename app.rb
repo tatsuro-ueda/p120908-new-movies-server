@@ -52,6 +52,10 @@ def feed_vimeo(tag)
       {:find => /<strong>/,
         :replace => ''},
       {:find => /<\/strong>/,
+        :replace => ''},
+      {:find => /<a href="http\:\/\/vimeo.com\/.+">/,
+        :replace => ''},
+      {:find => /<\/a>/,
         :replace => ''}
     ]).
     truncate(5)
@@ -65,13 +69,13 @@ get '/new_movie' do
   unless params['tag2']
     feed = feed_hatena1.append(feed_nico).unique
   else
-    feed_hatena2 = feed_hatena(params['tag2'])
-    puts 'hatena2' if DEBUG_APP
+    # feed_hatena2 = feed_hatena(params['tag2'])
+    # puts 'hatena2' if DEBUG_APP
     feed_vimeo = feed_vimeo(params['tag2'])
     puts 'vimeo' if DEBUG_APP
     feed = feed_hatena1.append(
-      feed_hatena2, feed_nico, feed_vimeo).
-      # feed_hatena2, feed_nico).
+      feed_nico, feed_vimeo).
+      # feed_hatena2, feed_nico, feed_vimeo).
       unique
       puts 'append + unique' if DEBUG_APP
   end
