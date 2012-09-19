@@ -24,7 +24,7 @@ def feed_nico(tag)
   url = URL.new(base, directories, queries)
   feed = Feed.new(url).regex([
       {:find => /<p class="nico-thumbnail"><img alt=".+" src="(.+)" width="94" height="70" border="0"\/><\/p>/, 
-      :replace => '<\1>'},
+      :replace => '$\1$'},
       {:find => /<p class="nico-description">/,
         :replace => ''},
       {:find => /<\/p>/,
@@ -42,7 +42,7 @@ def feed_vimeo(tag)
   feed = Feed.new(url).
     regex([
       {:find => /<p><a href="http\:\/\/vimeo\.com\/.+"><img src="(.+)" alt="" \/><\/a><\/p><p><p class="first">/, 
-        :replace => '<\1>'},
+        :replace => '$\1$'},
       {:find => /<p>/,
         :replace => ''},
       {:find => /<\/p>/,
