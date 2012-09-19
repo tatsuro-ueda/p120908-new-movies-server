@@ -140,7 +140,7 @@ class Feed
         i.link        = item.link
         desc = item.description
         for j in 0..(arg.size - 1)
-          desc = desc.sub(arg[j][:find], arg[j][:replace])
+          desc = desc.gsub(arg[j][:find], arg[j][:replace])
         end
         i.description = desc
         i.date        = item.date
