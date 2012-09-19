@@ -42,7 +42,7 @@ def feed_vimeo(tag)
   feed = Feed.new(url).
     regex([
       {:find => /<p><a href="http\:\/\/vimeo\.com\/.+"><img src="(.+)" alt="" \/><\/a><\/p><p><p class="first">/, 
-        :replace => '"\1'},
+        :replace => '"\1"'},
       {:find => /<p>/,
         :replace => ''},
       {:find => /<\/p>/,
