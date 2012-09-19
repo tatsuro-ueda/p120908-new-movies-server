@@ -63,6 +63,7 @@ class FeedTest < Test::Unit::TestCase
   end
   
   def test_initialize
+    puts 'test_initialize'
     actual = @feed4
     assert actual.items.length > 0
     
@@ -71,12 +72,14 @@ class FeedTest < Test::Unit::TestCase
   end
   
   def test_items
+    puts 'test_items'
     actual = @feed1.items
     puts actual.to_s if DEBUG_UNIQUE
     assert actual.size == 5
   end
   
   def test_append
+    puts 'test_append'
     actual = @feed1.append(@feed3)
     if DEBUG_APPEND
       for i in 0..9 do
@@ -86,18 +89,27 @@ class FeedTest < Test::Unit::TestCase
     assert actual.items.size == 10
   end
   
+  # def test_union
+  #   puts 'test_union'
+  #   actual = Feed.union(@feed1, @feed2)
+  #   assert actual.items.size == 10
+  # end
+  
   def test_unique
+    puts 'test_unique'
     actual = @feed1.append(@feed3).unique
     puts actual.to_s if DEBUG_UNIQUE
     assert actual.items.size > 0
   end
   
   def test_truncate
+    puts 'test_truncate'
     actual = @feed1.append(@feed2).truncate(5)
     assert actual.items.size == 5
   end
   
   def test_regex
+    puts 'test_regex'
     actual = @feed2.regex([
       {:find => /<p class="nico-thumbnail"><img alt=".*\n/, 
         :replace => ''},
@@ -117,6 +129,7 @@ class FeedTest < Test::Unit::TestCase
   end
   
   def test_filter
+    puts 'test_filter'
     setup_feed3
     actual = @feed3.filter({
       'title' => ["プロジェクト", "IT", "ニュース"], 

@@ -23,8 +23,8 @@ def feed_nico(tag)
   queries = [{'key' => 'rss', 'value' => '2.0'}]
   url = URL.new(base, directories, queries)
   feed = Feed.new(url).regex([
-      {:find => /<p class="nico-thumbnail"><img alt=".*\n/, 
-        :replace => ''},
+      {:find => /<p class="nico-thumbnail"><img alt=".+" src="(.+)" width="94" height="70" border="0"\/><\/p>/, 
+      :replace => '\1'},
       {:find => /<p class="nico-description">/,
         :replace => ''},
       {:find => /<\/p>/,
@@ -41,7 +41,14 @@ def feed_vimeo(tag)
   url = URL.new(base, directories)
   feed = Feed.new(url).
     regex([
-      {:find => /.*/, :replace => ''}
+      {:find => /<p><a href="http\:\/\/vimeo\.com\/.+"><img src="(.+)" alt="" \/><\/a><\/p><p><p class="first">/, 
+        :replace => '\1'},
+      {:find => /<p>/,
+        :replace => ''},
+      {:find => /<\/p>/,
+        :replace => ''},
+      {:find => /<br>/,
+        :replace => ''}
     ]).
     truncate(5)
 end

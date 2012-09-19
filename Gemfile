@@ -1,5 +1,2 @@
 source 'https://rubygems.org'
 gem 'sinatra', '1.3.2'
-gem 'guard'
-gem 'guard-livereload'
-gem 'rb-fsevent', '~> 0.9.1'

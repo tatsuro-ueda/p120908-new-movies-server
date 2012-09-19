@@ -69,7 +69,7 @@ class Feed
   end
   
   # うまく動かない
-  def Feed.union(*appended_feeds)
+  def self.union(*appended_feeds)
     output_feed= RSS::Maker.make("2.0") do |output_feed|
       create_sample_feed(output_feed)
       output_feed.items.do_sort = true
@@ -81,7 +81,6 @@ class Feed
       end
     end
     @feed = output_feed
-    self
   end
   
   def unique
