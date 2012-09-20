@@ -32,7 +32,7 @@ def feed_nico(tag)
       {:find => /<p class="nico-info">.*\n/,
         :replace => ''}
       ]).
-      truncate(20)
+      truncate(5)
 end
 
 def feed_vimeo(tag)
@@ -58,7 +58,7 @@ def feed_vimeo(tag)
       {:find => /<\/a>/,
         :replace => ''}
     ]).
-    truncate(20)
+    truncate(3)
 end
 
 get '/new_movie' do
