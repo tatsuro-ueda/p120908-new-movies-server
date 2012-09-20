@@ -23,12 +23,9 @@
     </select>
   </div>
 
-<% feed = feed_hatena('技術')
-   for i in 0..feed.items.size %>
+<% feed = feed_hatena('技術') %>
 
-  <div data-role="content"><% puts feed.items[i].title %></div>
-
-<% end %>
+  <div data-role="content"><% feed.items[0].title %></div>
 
 
   <ul data-role="listview">
