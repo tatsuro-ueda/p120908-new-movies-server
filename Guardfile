@@ -11,4 +11,5 @@ guard 'livereload' do
 
   # sinatra
   watch(%r{.+\.rb})
+  watch(%r{views/.+\.(erb|haml|sass|css)})
 end

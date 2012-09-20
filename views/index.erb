@@ -24,11 +24,12 @@
   </div>
 
 <% feed = feed_hatena('技術') %>
-<% for i in 0..feed.items.size %>
+<% feed.items.size.times{|i| %>
 
-  <div data-role="content"><%= feed.items[i].title %></div>
+  <h3><%= feed.items[i].title %></h3>
+  <div data-role="content"><%= feed.items[i].description %></div>
 
-<% end %>
+<% } %>
 
   <ul data-role="listview">
     <li><a href="#">ページ</a></li>
