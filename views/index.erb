@@ -26,7 +26,7 @@
 <% feed = feed_hatena('技術')
    for i in 0..feed.items.size %>
 
-  <div data-role="content"><%= feed.items[i].title %></div>
+  <div data-role="content"><% puts feed.items[i].title %></div>
 
 <% end %>
 
