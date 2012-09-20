@@ -14,7 +14,7 @@ def feed_hatena(tag)
   feed = Feed.new(url).
     filter({'title' => ['動画', '映像'], 
       'link' => ['youtube', 'vimeo', 'nicovideo']}).
-    truncate(5)
+    truncate(3)
 end
 
 def feed_nico(tag)
@@ -32,7 +32,7 @@ def feed_nico(tag)
       {:find => /<p class="nico-info">.*\n/,
         :replace => ''}
       ]).
-      truncate(5)
+      truncate(20)
 end
 
 def feed_vimeo(tag)
@@ -58,7 +58,7 @@ def feed_vimeo(tag)
       {:find => /<\/a>/,
         :replace => ''}
     ]).
-    truncate(5)
+    truncate(20)
 end
 
 get '/new_movie' do
