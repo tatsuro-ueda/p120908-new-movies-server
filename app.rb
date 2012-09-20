@@ -83,5 +83,6 @@ get '/new_movie' do
   feed.to_s
 end
 
-get '/index.html' do
+get '/index' do
+  erb :index
 end
