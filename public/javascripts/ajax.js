@@ -5,13 +5,18 @@
     var req;
     req = new XMLHttpRequest();
     req.addEventListener('readystatechange', function() {
+      var result;
       if (req.readyState === 4) {
-        if (req.status === 200) {
+        if (req.status === 200 || req.status === 304) {
+          result = document.getElementById('result');
           return result.innerHTML = req.responseText;
         }
+      } else {
+        return console.log('Error loading data...');
       }
     });
-    return req.open('GET', '/new_movie?tag1=%E6%8A%80%E8%A1%93&tag2=technology', true);
+    req.open('GET', 'new_movie?tag1=技術&tag2=technology', false);
+    return req.send();
   };
 
   loadDataButton = document.getElementById('loadDataButton');
