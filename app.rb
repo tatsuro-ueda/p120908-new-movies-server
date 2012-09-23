@@ -3,6 +3,7 @@ require 'sinatra'
 require 'rss'
 require './url'
 require './feed'
+require 'newrelic_rpm'
 
 def feed_hatena(tag)
   base = 'b.hatena.ne.jp'
