@@ -66,13 +66,15 @@ def feed_vimeo(tag)
 end
 
 get '/new_movie' do
-  t1 = Thread.new do
-    feed_nico = feed_nico(params['tag1'])
+  # Thread One
+  t1 = Thread.new(params['tag1']) do |param_tag1|
+    feed_nico = feed_nico(param_tag1)
     puts 'nico' if DEBUG_APP
   end 
-  t2 = Thread.new do
-    if params['tag2']
-      feed_vimeo = feed_vimeo(params['tag2'])
+  # Thread Two
+  if params['tag2']
+    t2 = Thread.new(params['tag2']) do |param_tag2|
+      feed_vimeo = feed_vimeo(param_tag2)
       puts 'vimeo' if DEBUG_APP     
     end
   end
@@ -81,15 +83,15 @@ get '/new_movie' do
   puts 'hatena1' if DEBUG_APP
   
   t1.join
-  t2.join
+  t2.join if params['tag2']
   
-  unless params['tag2']
-    feed = feed_hatena1.append(feed_nico).unique
-  else
+  if params['tag2']
     feed = feed_hatena1.append(
       feed_nico, feed_vimeo).
       unique
-      puts 'append + unique' if DEBUG_APP
+    puts 'append + unique' if DEBUG_APP
+  else
+    feed = feed_hatena1.append(feed_nico).unique
   end
   content_type = 'text/xml; charset=utf-8'
   feed.to_s
