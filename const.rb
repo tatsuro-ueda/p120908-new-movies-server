@@ -3,5 +3,5 @@ DEBUG_UNIQUE = false
 DEBUG_ITEMS = false
 DEBUG_APPEND = false
 DEBUG_REGEX = false
-DEBUG_FILTER = true
-DEBUG_APP = true
+DEBUG_FILTER = false
+DEBUG_APP = false

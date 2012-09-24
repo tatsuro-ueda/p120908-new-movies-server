@@ -66,20 +66,28 @@ def feed_vimeo(tag)
 end
 
 get '/new_movie' do
+  t1 = Thread.new do
+    feed_nico = feed_nico(params['tag1'])
+    puts 'nico' if DEBUG_APP
+  end 
+  t2 = Thread.new do
+    if params['tag2']
+      feed_vimeo = feed_vimeo(params['tag2'])
+      puts 'vimeo' if DEBUG_APP     
+    end
+  end
+  # Main Thread
   feed_hatena1 = feed_hatena(params['tag1'])
   puts 'hatena1' if DEBUG_APP
-  feed_nico = feed_nico(params['tag1'])
-  puts 'nico' if DEBUG_APP
+  
+  t1.join
+  t2.join
+  
   unless params['tag2']
     feed = feed_hatena1.append(feed_nico).unique
   else
-    # feed_hatena2 = feed_hatena(params['tag2'])
-    # puts 'hatena2' if DEBUG_APP
-    feed_vimeo = feed_vimeo(params['tag2'])
-    puts 'vimeo' if DEBUG_APP
     feed = feed_hatena1.append(
       feed_nico, feed_vimeo).
-      # feed_hatena2, feed_nico, feed_vimeo).
       unique
       puts 'append + unique' if DEBUG_APP
   end
