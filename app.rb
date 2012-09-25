@@ -68,13 +68,13 @@ end
 get '/new_movie' do
   # Thread One
   t1 = Thread.new(params['tag1']) do |param_tag1|
-    feed_nico = feed_nico(param_tag1)
+    @feed_nico = feed_nico(param_tag1)
     puts 'nico' if DEBUG_APP
   end 
   # Thread Two
   if params['tag2']
     t2 = Thread.new(params['tag2']) do |param_tag2|
-      feed_vimeo = feed_vimeo(param_tag2)
+      @feed_vimeo = feed_vimeo(param_tag2)
       puts 'vimeo' if DEBUG_APP     
     end
   end
@@ -87,7 +87,7 @@ get '/new_movie' do
   
   if params['tag2']
     feed = feed_hatena1.append(
-      feed_nico, feed_vimeo).
+      @feed_nico, @feed_vimeo).
       unique
     puts 'append + unique' if DEBUG_APP
   else
