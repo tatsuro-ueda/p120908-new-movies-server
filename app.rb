@@ -91,7 +91,7 @@ get '/new_movie' do
       unique
     puts 'append + unique' if DEBUG_APP
   else
-    feed = feed_hatena1.append(feed_nico).unique
+    feed = feed_hatena1.append(@feed_nico).unique
   end
   content_type = 'text/xml; charset=utf-8'
   feed.to_s
