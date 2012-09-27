@@ -18,6 +18,10 @@ class Feed
     self
   end
   
+  def initialize(string)
+    @feed = string
+  end
+  
   def add_new_item(item, output_feed)
     i= output_feed.items.new_item
     i.title       = item.title
