@@ -1,7 +1,7 @@
 #encoding: utf-8
 require 'sinatra'
 require 'rss'
-require 'Dalli'
+require 'dalli'
 require './url'
 require './feed'
 
