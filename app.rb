@@ -76,12 +76,12 @@ end
 get '/new_movie' do
   # if cache exists
   if params['tag2']
-    key = 'tag1=' + params['tag1'] + '&tag2=' + params['tag2']
+    @key = 'tag1=' + params['tag1'] + '&tag2=' + params['tag2']
   else
-    key = 'tag1=' + params['tag1']
+    @key = 'tag1=' + params['tag1']
   end
   
-  if output = settings.cache.get(key)
+  if output = settings.cache.get(@key)
     output
 
   # if cache does not exists
@@ -113,11 +113,15 @@ get '/new_movie' do
     else
       feed = feed_hatena1.append(@feed_nico).unique
     end
-    content_type = 'text/xml; charset=utf-8'
     
-    settings.cache.set(key, feed.to_s)
-    feed.to_s
+    content_type = 'text/xml; charset=utf-8'
+    @output = feed.to_s
   end
+end
+
+after '/new_movie' do
+  puts 'saved'
+  settings.cache.set(@key, @output)
 end
 
 get '/test.html' do
