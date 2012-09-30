@@ -1,12 +1,20 @@
 #encoding: utf-8
 require 'sinatra'
 require 'rss'
+require 'dalli'
 require './url'
 require './feed'
 
 configure :production do
 	require 'newrelic_rpm'
 end
+
+set :cache, Dalli::Client.new(ENV['MEMCACHE_SERVERS'],
+                    :username => ENV['MEMCACHE_USERNAME'],
+                    :password => ENV['MEMCACHE_PASSWORD'],
+                    :expires_in => 60 * 30)
+# data = settings.cache.get(tag)
+# settings.cache.set(tag,data)
 
 def feed_hatena(tag)
   base = 'b.hatena.ne.jp'
@@ -15,7 +23,7 @@ def feed_hatena(tag)
     {'key' => 'of', 'value' => 0},
     {'key' => 'mode', 'value' => 'rss'}]
   url = URL.new(base, directories, queries)
-  feed = Feed.new(url).
+  cached_feed_hatena = Feed.new(url).
     filter({'title' => ['動画', '映像'], 
       'link' => ['youtube', 'vimeo', 'nicovideo']}).
     truncate(3)
@@ -26,7 +34,7 @@ def feed_nico(tag)
   directories = ['tag', tag]
   queries = [{'key' => 'rss', 'value' => '2.0'}]
   url = URL.new(base, directories, queries)
-  feed = Feed.new(url).regex([
+  cached_feed_nico = Feed.new(url).regex([
       {:find => /<p class="nico-thumbnail"><img alt=".+" src="(.+)" width="94" height="70" border="0"\/><\/p>/, 
       :replace => '"\1"'},
       {:find => /<p class="nico-description">/,
@@ -43,7 +51,7 @@ def feed_vimeo(tag)
   base = 'vimeo.com'
   directories = ['tag:' + tag, 'rss']
   url = URL.new(base, directories)
-  feed = Feed.new(url).
+  cached_feed_vimeo = Feed.new(url).
     regex([
       {:find => /<p><a href="http\:\/\/vimeo\.com\/.+"><img src="(.+)" alt="" \/><\/a><\/p><p><p class="first">/, 
         :replace => '"\1"'},
@@ -66,35 +74,50 @@ def feed_vimeo(tag)
 end
 
 get '/new_movie' do
-  # Thread One
-  t1 = Thread.new(params['tag1']) do |param_tag1|
-    @feed_nico = feed_nico(param_tag1)
-    puts 'nico' if DEBUG_APP
-  end 
-  # Thread Two
+  # if cache exists
   if params['tag2']
-    t2 = Thread.new(params['tag2']) do |param_tag2|
-      @feed_vimeo = feed_vimeo(param_tag2)
-      puts 'vimeo' if DEBUG_APP     
-    end
-  end
-  # Main Thread
-  feed_hatena1 = feed_hatena(params['tag1'])
-  puts 'hatena1' if DEBUG_APP
-  
-  t1.join
-  t2.join if params['tag2']
-  
-  if params['tag2']
-    feed = feed_hatena1.append(
-      @feed_nico, @feed_vimeo).
-      unique
-    puts 'append + unique' if DEBUG_APP
+    key = 'tag1=' + params['tag1'] + '&tag2=' + params['tag2']
   else
-    feed = feed_hatena1.append(@feed_nico).unique
+    key = 'tag1=' + params['tag1']
   end
-  content_type = 'text/xml; charset=utf-8'
-  feed.to_s
+  
+  if output = settings.cache.get(key)
+    output
+
+  # if cache does not exists
+  else
+    # Thread One
+    t1 = Thread.new(params['tag1']) do |param_tag1|
+      @feed_nico = feed_nico(param_tag1)
+      puts 'nico' if DEBUG_APP
+    end 
+    # Thread Two
+    if params['tag2']
+      t2 = Thread.new(params['tag2']) do |param_tag2|
+        @feed_vimeo = feed_vimeo(param_tag2)
+        puts 'vimeo' if DEBUG_APP     
+      end
+    end
+    # Main Thread
+    feed_hatena1 = feed_hatena(params['tag1'])
+    puts 'hatena1' if DEBUG_APP
+
+    t1.join
+    t2.join if params['tag2']
+
+    if params['tag2']
+      feed = feed_hatena1.append(
+        @feed_nico, @feed_vimeo).
+        unique
+      puts 'append + unique' if DEBUG_APP
+    else
+      feed = feed_hatena1.append(@feed_nico).unique
+    end
+    content_type = 'text/xml; charset=utf-8'
+    
+    settings.cache.set(key, feed.to_s)
+    feed.to_s
+  end
 end
 
 get '/test.html' do
