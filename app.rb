@@ -74,13 +74,13 @@ def feed_vimeo(tag)
 end
 
 get '/new_movie' do
-  # if cache exists
   if params['tag2']
     @key = 'tag1=' + params['tag1'] + '&tag2=' + params['tag2']
   else
     @key = 'tag1=' + params['tag1']
   end
   
+  # if cache exists
   if output = settings.cache.get(@key)
     output
 
