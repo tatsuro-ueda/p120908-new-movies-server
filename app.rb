@@ -89,7 +89,7 @@ def getFeed(tag1, tag2)
   puts 'hatena1' if DEBUG_APP
 
   t1.join
-  t2.join if params[tag2]
+  t2.join if tag2
 
   if tag2
     feed = feed_hatena1.append(
@@ -101,7 +101,7 @@ def getFeed(tag1, tag2)
   end
 
   content_type = 'text/xml; charset=utf-8'
-  puts "getFeed executed"
+  puts "getFeed executed" if DEBUG_APP
   # after do でmemcacheに保存するためにインスタンス変数を使っている
   @output = feed.to_s
 end
@@ -116,6 +116,7 @@ get '/new_movie' do
   # if cache exists
   if output = settings.cache.get(@key)
     @cache_used = true;
+    puts "cache used" if DEBUG_APP
     output
   # if cache does not exists
   else
