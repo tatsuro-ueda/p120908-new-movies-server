@@ -1,0 +1,6 @@
+# Logfile created on 2012-11-01 11:33:02 +0900 by logger.rb/31641
+[11/01/12 11:33:02 +0900 Air.local (1348)] INFO : Dispatcher: sinatra
+[11/01/12 11:33:02 +0900 Air.local (1348)] ERROR : Unable to determine application name. Please set the application name in your newrelic.yml or in a NEW_RELIC_APP_NAME environment variable.
+[11/01/12 11:33:02 +0900 Air.local (1348)] WARN : Agent configured not to send data in this environment - edit newrelic.yml to change this
+[11/01/12 11:33:02 +0900 Air.local (1348)] INFO : New Relic Ruby Agent 3.4.2.1 Initialized: pid = 1348
+[11/01/12 11:33:02 +0900 Air.local (1348)] INFO : Agent Log at /Users/stky/Desktop/ueda_tatsuro/xcode workspace/p120908-new-movies-server/log/newrelic_agent.log

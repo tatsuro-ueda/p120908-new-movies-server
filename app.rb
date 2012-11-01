@@ -71,6 +71,40 @@ def feed_vimeo(tag)
     truncate(3)
 end
 
+def getFeed(tag1, tag2)
+  # Thread One
+  t1 = Thread.new(tag1) do |param_tag1|
+    @feed_nico = feed_nico(param_tag1)
+    puts 'nico' if DEBUG_APP
+  end
+  # Thread Two
+  if tag2
+    t2 = Thread.new(tag2) do |param_tag2|
+      @feed_vimeo = feed_vimeo(param_tag2)
+      puts 'vimeo' if DEBUG_APP
+    end
+  end
+  # Main Thread
+  feed_hatena1 = feed_hatena(tag1)
+  puts 'hatena1' if DEBUG_APP
+
+  t1.join
+  t2.join if params[tag2]
+
+  if tag2
+    feed = feed_hatena1.append(
+      @feed_nico, @feed_vimeo).
+      unique
+    puts 'append + unique' if DEBUG_APP
+  else
+    feed = feed_hatena1.append(@feed_nico).unique
+  end
+
+  content_type = 'text/xml; charset=utf-8'
+  # after do でmemcacheに保存するためにインスタンス変数を使っている
+  @output = feed.to_s
+end
+
 get '/new_movie' do
   if params['tag2']
     @key = 'tag1=' + params['tag1'] + '&tag2=' + params['tag2']
@@ -81,39 +115,9 @@ get '/new_movie' do
   # if cache exists
   if output = settings.cache.get(@key)
     output
-
   # if cache does not exists
   else
-    # Thread One
-    t1 = Thread.new(params['tag1']) do |param_tag1|
-      @feed_nico = feed_nico(param_tag1)
-      puts 'nico' if DEBUG_APP
-    end
-    # Thread Two
-    if params['tag2']
-      t2 = Thread.new(params['tag2']) do |param_tag2|
-        @feed_vimeo = feed_vimeo(param_tag2)
-        puts 'vimeo' if DEBUG_APP
-      end
-    end
-    # Main Thread
-    feed_hatena1 = feed_hatena(params['tag1'])
-    puts 'hatena1' if DEBUG_APP
-
-    t1.join
-    t2.join if params['tag2']
-
-    if params['tag2']
-      feed = feed_hatena1.append(
-        @feed_nico, @feed_vimeo).
-        unique
-      puts 'append + unique' if DEBUG_APP
-    else
-      feed = feed_hatena1.append(@feed_nico).unique
-    end
-
-    content_type = 'text/xml; charset=utf-8'
-    @output = feed.to_s
+    getFeed(params['tag1'], params['tag2']);
   end
 end
 
