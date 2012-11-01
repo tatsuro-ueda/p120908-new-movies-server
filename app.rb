@@ -115,6 +115,7 @@ get '/new_movie' do
 
   # if cache exists
   if output = settings.cache.get(@key)
+    @cache_used = true;
     output
   # if cache does not exists
   else
@@ -123,7 +124,9 @@ get '/new_movie' do
 end
 
 after '/new_movie' do
-  puts 'saved'
+  if @cache_used
+    @output = getFeed(params['tag1'], params['tag2']);
+  end
   settings.cache.set(@key, @output)
 end
 
