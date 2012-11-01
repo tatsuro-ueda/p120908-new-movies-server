@@ -101,6 +101,7 @@ def getFeed(tag1, tag2)
   end
 
   content_type = 'text/xml; charset=utf-8'
+  puts "getFeed executed"
   # after do でmemcacheに保存するためにインスタンス変数を使っている
   @output = feed.to_s
 end
