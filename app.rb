@@ -114,13 +114,16 @@ get '/new_movie' do
   end
 
   # if cache exists
-  if output = settings.cache.get(@key)
+  @output = settings.cache.get(@key)
+  if @output
+    # use cache data
     @cache_used = true;
     puts "cache used" if DEBUG_APP
-    output
+    @output
   # if cache does not exists
   else
-    getFeed(params['tag1'], params['tag2']);
+    # get new Feed
+    @output = getFeed(params['tag1'], params['tag2']);
   end
 end
 
