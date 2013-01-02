@@ -24,7 +24,7 @@ def feed_hatena(tag)
     {'key' => 'mode', 'value' => 'rss'}]
   url = URL.new(base, directories, queries)
   cached_feed_hatena = Feed.new(url).
-    filter({'title' => ['動画', '映像'], 
+    filter({'title' => ['動画', '映像'],
       'link' => ['youtube', 'vimeo', 'nicovideo']}).
     truncate(3)
 end
@@ -35,7 +35,7 @@ def feed_nico(tag)
   queries = [{'key' => 'rss', 'value' => '2.0'}]
   url = URL.new(base, directories, queries)
   cached_feed_nico = Feed.new(url).regex([
-      {:find => /<p class="nico-thumbnail"><img alt=".+" src="(.+)" width="94" height="70" border="0"\/><\/p>/, 
+      {:find => /<p class="nico-thumbnail"><img alt=".+" src="(.+)" width="94" height="70" border="0"\/><\/p>/,
       :replace => '"\1"'},
       {:find => /<p class="nico-description">/,
         :replace => ''},
@@ -44,7 +44,7 @@ def feed_nico(tag)
       {:find => /<p class="nico-info">.*\n/,
         :replace => ''}
       ]).
-      truncate(10)
+      truncate(1)
 end
 
 def feed_vimeo(tag)
@@ -53,7 +53,7 @@ def feed_vimeo(tag)
   url = URL.new(base, directories)
   cached_feed_vimeo = Feed.new(url).
     regex([
-      {:find => /<p><a href="http\:\/\/vimeo\.com\/.+"><img src="(.+)" alt="" \/><\/a><\/p><p><p class="first">/, 
+      {:find => /<p><a href="http\:\/\/vimeo\.com\/.+"><img src="(.+)" alt="" \/><\/a><\/p><p><p class="first">/,
         :replace => '"\1"'},
       {:find => /<p>/,
         :replace => ''},
@@ -79,7 +79,7 @@ get '/new_movie' do
   else
     @key = 'tag1=' + params['tag1']
   end
-  
+
   # if cache exists
   if output = settings.cache.get(@key)
     output
@@ -90,12 +90,12 @@ get '/new_movie' do
     t1 = Thread.new(params['tag1']) do |param_tag1|
       @feed_nico = feed_nico(param_tag1)
       puts 'nico' if DEBUG_APP
-    end 
+    end
     # Thread Two
     if params['tag2']
       t2 = Thread.new(params['tag2']) do |param_tag2|
         @feed_vimeo = feed_vimeo(param_tag2)
-        puts 'vimeo' if DEBUG_APP     
+        puts 'vimeo' if DEBUG_APP
       end
     end
     # Main Thread
@@ -113,7 +113,7 @@ get '/new_movie' do
     else
       feed = feed_hatena1.append(@feed_nico).unique
     end
-    
+
     content_type = 'text/xml; charset=utf-8'
     @output = feed.to_s
   end
