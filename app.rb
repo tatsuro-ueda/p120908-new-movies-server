@@ -42,7 +42,7 @@ def feed_nico(tag)
       {:find => /<p class="nico-info">.*\n/,
         :replace => ''}
       ]).
-      truncate(1)
+      truncate(10)
 end
 
 def feed_vimeo(tag)
@@ -85,10 +85,12 @@ get '/new_movie' do
   # if cache does not exists
   else
     # Thread One
-    t1 = Thread.new(params['tag1']) do |param_tag1|
-      @feed_nico = feed_nico(param_tag1)
-      puts 'nico' if DEBUG_APP
-    end
+    #####
+    # t1 = Thread.new(params['tag1']) do |param_tag1|
+    #   @feed_nico = feed_nico(param_tag1)
+    #   puts 'nico' if DEBUG_APP
+    # end
+    #####
     # Thread Two
     if params['tag2']
       t2 = Thread.new(params['tag2']) do |param_tag2|
@@ -100,16 +102,24 @@ get '/new_movie' do
     feed_hatena1 = feed_hatena(params['tag1'])
     puts 'hatena1' if DEBUG_APP
 
-    t1.join
+    #####
+    # t1.join
+    #####
     t2.join if params['tag2']
 
     if params['tag2']
       feed = feed_hatena1.append(
-        @feed_nico, @feed_vimeo).
+        #####
+        # @feed_nico, @feed_vimeo).
+        #####
+        @feed_vimeo).
         unique
       puts 'append + unique' if DEBUG_APP
     else
-      feed = feed_hatena1.append(@feed_nico).unique
+      #####
+      # feed = feed_hatena1.append(@feed_nico).unique
+      #####
+      feed = feed_hatena1
     end
 
     content_type = 'text/xml; charset=utf-8'

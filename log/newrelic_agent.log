@@ -1,0 +1,6 @@
+# Logfile created on 2013-01-02 14:20:29 +0900 by logger.rb/31641
+[01/02/13 14:20:29 +0900 weed-mba.home (1986)] INFO : Dispatcher: sinatra
+[01/02/13 14:20:29 +0900 weed-mba.home (1986)] ERROR : Unable to determine application name. Please set the application name in your newrelic.yml or in a NEW_RELIC_APP_NAME environment variable.
+[01/02/13 14:20:29 +0900 weed-mba.home (1986)] WARN : Agent configured not to send data in this environment - edit newrelic.yml to change this
+[01/02/13 14:20:29 +0900 weed-mba.home (1986)] INFO : New Relic Ruby Agent 3.4.2.1 Initialized: pid = 1986
+[01/02/13 14:20:29 +0900 weed-mba.home (1986)] INFO : Agent Log at /Users/weed/Dropbox/recent_private_doc/Xcode Projects/p120908-new-movies-server/log/newrelic_agent.log
