@@ -5,9 +5,7 @@ require 'dalli'
 require './url'
 require './feed'
 
-configure :production do
-	require 'newrelic_rpm'
-end
+require 'newrelic_rpm'
 
 set :cache, Dalli::Client.new(ENV['MEMCACHE_SERVERS'],
                     :username => ENV['MEMCACHE_USERNAME'],
