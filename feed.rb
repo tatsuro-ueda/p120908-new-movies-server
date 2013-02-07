@@ -9,7 +9,11 @@ class Feed
   def initialize(url)
     host = url.host
     path = url.path
-    feed = Net::HTTP.get(host, path).force_encoding('utf-8')
+    proxy_class = Net::HTTP::Proxy('proxy1.screen.co.jp', 8080)
+    feed = proxy_class.get(host, path).force_encoding('utf-8')
+    configure :production do
+      feed = Net::HTTP.get(host, path).force_encoding('utf-8')
+    end
     begin
       @feed = RSS::Parser.parse(feed)
     rescue RSS::InvalidRSSError

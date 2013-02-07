@@ -9,10 +9,15 @@ configure :production do
 	require 'newrelic_rpm'
 end
 
-set :cache, Dalli::Client.new(ENV['MEMCACHE_SERVERS'],
-                    :username => ENV['MEMCACHE_USERNAME'],
-                    :password => ENV['MEMCACHE_PASSWORD'],
-                    :expires_in => 60 * 30)
+configure :production do
+  set :cache, Dalli::Client.new(
+    ENV['MEMCACHE_SERVERS'],
+    :username => ENV['MEMCACHE_USERNAME'],
+    :password => ENV['MEMCACHE_PASSWORD'],
+    :expires_in => 60 * 30
+  )
+end
+
 # data = settings.cache.get(tag)
 # settings.cache.set(tag,data)
 
@@ -80,12 +85,14 @@ get '/new_movie' do
     @key = 'tag1=' + params['tag1']
   end
 
-  # if cache exists
-  if output = settings.cache.get(@key)
-    output
+  configure :production do
+    # if cache exists
+    if output = settings.cache.get(@key)
+      output
+    else
+  end
 
   # if cache does not exists
-  else
     # Thread One
     t1 = Thread.new(params['tag1']) do |param_tag1|
       @feed_nico = feed_nico(param_tag1)
@@ -120,8 +127,10 @@ get '/new_movie' do
 end
 
 after '/new_movie' do
-  puts 'saved'
-  settings.cache.set(@key, @output)
+  puts 'saved' if DEBUG_APP
+  configure :production do
+    settings.cache.set(@key, @output)
+  end
 end
 
 get '/test.html' do
