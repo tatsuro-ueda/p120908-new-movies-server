@@ -85,12 +85,12 @@ get '/new_movie' do
     @key = 'tag1=' + params['tag1']
   end
 
-  configure :production do
+  #configure :production do
     # if cache exists
     if output = settings.cache.get(@key)
       output
     else
-  end
+  #end
 
   # if cache does not exists
     # Thread One
