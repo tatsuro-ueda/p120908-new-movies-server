@@ -33,20 +33,6 @@ class Feed
     end
   end
 
-  def create_new_feed(feed, about, title, description, link, language = 'ja') 
-    feed.channel.about = about
-    feed.channel.title = title
-    feed.channel.description = description
-    feed.channel.link = link
-    feed.channel.language = language
-  end
-  
-  def create_sample_feed(output_feed)
-    create_new_feed(
-      output_feed, 'http://hoge/rss.xml', "hoge", 
-      "hoge.description", "http://hoge.link")
-  end
-  
   def to_s
     @feed.to_s
   end
