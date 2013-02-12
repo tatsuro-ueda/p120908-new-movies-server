@@ -2,3 +2,9 @@ untitled.temproj
 untitled.tmproj
 
 .DS_Store
+
+*.xml
+
+*.xml
+
+.idea/workspace.xml

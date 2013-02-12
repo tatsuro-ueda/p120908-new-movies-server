@@ -4,8 +4,6 @@ require 'rss'
 require './const'
 
 class Feed
-  @feed
-  
   def initialize(url)
     host = url.host
     path = url.path
