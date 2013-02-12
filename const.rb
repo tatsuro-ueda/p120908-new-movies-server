@@ -4,4 +4,4 @@ DEBUG_ITEMS = false
 DEBUG_APPEND = false
 DEBUG_REGEX = false
 DEBUG_FILTER = false
-DEBUG_APP = false
+DEBUG_APP = true

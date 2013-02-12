@@ -18,6 +18,10 @@ configure :production do
   )
 end
 
+configure :development do
+  require 'sinatra/reloader'
+end
+
 # data = settings.cache.get(tag)
 # settings.cache.set(tag,data)
 
@@ -85,14 +89,15 @@ get '/new_movie' do
     @key = 'tag1=' + params['tag1']
   end
 
-  #configure :production do
+  configure :production do
     # if cache exists
     if output = settings.cache.get(@key)
+      @isCacheUsed = true
       output
-    else
-  #end
+    end
+  end
 
-  # if cache does not exists
+  unless @isCacheUsed
     # Thread One
     t1 = Thread.new(params['tag1']) do |param_tag1|
       @feed_nico = feed_nico(param_tag1)
