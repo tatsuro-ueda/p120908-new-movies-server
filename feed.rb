@@ -19,7 +19,6 @@ class Feed
     rescue RSS::InvalidRSSError
       @feed = RSS::Parser.parse(feed, false )
     end
-    self
   end
   
   def add_new_item(item, output_feed)
