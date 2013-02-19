@@ -17,20 +17,21 @@ describe "Feedクラス" do
       @feed4.items.length.should > 0
     end
     it "配列オブジェクトの要素数は5である" do
-      @feed1.items.length == 5
-      @feed2.items.length == 5
-      @feed3.items.length == 5
-      @feed4.items.length == 5
+      @feed1.items.length.should == 5
+      @feed2.items.length.should == 5
+      @feed3.items.length.should == 5
+      @feed4.items.length.should == 5
     end
   end
   it "#append：フィードに別のフィードを追加する" do
-    @feed1.append(@feed3).items.length == 10
+    @feed1.append(@feed3).items.length.should == 10
   end
   it "#unique：重複する項目を除去する" do
-    @feed1.append(@feed1).unique.items.length == 5
+    puts @feed1.to_s
+    @feed1.append(@feed1).unique.items.length.should == 5
   end
   it "#truncate：項目数を制限する" do
-    @feed1.append(@feed2).truncate(5).items.length == 5
+    @feed1.append(@feed2).truncate(5).items.length.should == 5
   end
   it "#regex：内容を置換する" do
     @feed2.regex([
@@ -42,12 +43,12 @@ describe "Feedクラス" do
       :replace => ''},
       {:find => /<p class="nico-info">.*\n/,
       :replace => ''}
-    ]).items.length == 5
+    ]).items.length.should == 5
   end
   it "#filter：キーワードを含むフィードを返す" do
     @feed3.filter({
       'title' => ["プロジェクト", "IT", "ニュース"],
       'link' => ["itmedia", "yomiuri", "mainichi"]
-    }).items.length > 0
+    }).items.length.should > 0
   end
 end
