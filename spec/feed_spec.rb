@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 require 'feed_spec_helper'
 
 describe "Feedクラス" do
-  before(:all) {
+  before(:each) {
     @feed1 = setup_feed1
     @feed2 = setup_feed2
     @feed3 = setup_feed3
@@ -23,12 +23,22 @@ describe "Feedクラス" do
       @feed4.items.length.should == 5
     end
   end
-  it "#append：フィードに別のフィードを追加する" do
-    @feed1.append(@feed3).items.length.should == 10
+  describe "#append" do
+    context "@feed1の長さは5、@feed3の長さは2のとき、それらをappendしたfeedの長さ" do
+      before {@result = @feed1.append(@feed3)}
+      subject {@result}
+      it{should have(10).items}
+#        subject.items.length.should == 7
+#      end
+    end
   end
-  it "#unique：重複する項目を除去する" do
-    puts @feed1.to_s
-    @feed1.append(@feed1).unique.items.length.should == 5
+  describe "#unique" do
+    before {
+      p @feed1.items.length
+    }
+    it "#unique：重複する項目を除去する" do
+      @feed1.append(@feed1).unique.items.length.should == 5
+    end
   end
   it "#truncate：項目数を制限する" do
     @feed1.append(@feed2).truncate(5).items.length.should == 5
