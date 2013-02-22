@@ -17,6 +17,9 @@ def setup_feed2
   directories = ['tag', tag]
   queries = [{'key' => 'rss', 'value' => '2.0'}]
   url = URL.new(base, directories, queries)
+  nico_url = 'www.nicovideo.jp/tag/技術?rss=2.0'
+  nico_body = read_nicovideo_webmock_contents
+  stub_request(:get, nico_url).to_return({:body => nico_body,:status => 200})
   Feed.new(url).truncate(5)
 end
 
@@ -37,4 +40,8 @@ def setup_feed_vimeo
   directories = ['tag:' + tag, 'rss']
   url = URL.new(base, directories)
   Feed.new(url).truncate(5)
+end
+
+def read_nicovideo_webmock_contents
+  File.read('a.txt')
 end
