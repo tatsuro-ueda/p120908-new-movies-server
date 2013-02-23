@@ -8,6 +8,7 @@ def setup_feed1
     {'key' => 'of', 'value' => 40},
     {'key' => 'mode', 'value' => 'rss'}]
   url = URL.new(base, directories, queries)
+  aurl = 'http://www.nicovideo.jp/tag/技術?rss=2.0'
   Feed.new(url).truncate(5)
 end
 

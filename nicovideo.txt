@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+
+  <channel>
+    <title>タグ 技術‐ニコニコ動画</title>
+    <link>http://www.nicovideo.jp/tag/%E6%8A%80%E8%A1%93</link>
+    <atom:link rel="self" type="application/rss+xml" href="http://www.nicovideo.jp/tag/技術?rss=2.0"/>
+    <description>タグ「技術」が付けられた動画 (全 139 件)</description>
+    <pubDate>Tue, 19 Feb 2013 20:41:21 +0900</pubDate>
+    <lastBuildDate>Tue, 19 Feb 2013 20:41:21 +0900</lastBuildDate>
+    <generator>ニコニコ動画</generator>
+    <language>ja-jp</language>
+    <copyright>(c) niwango, inc. All rights reserved.</copyright>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+
+    <item>
+      <title>[ScienceNews]シリーズ防災・減災の科学　より早く、正確な緊急地震速報を！</title>
+      <link>http://www.nicovideo.jp/watch/so18022657</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-06-06:/watch/so18022657</guid>
+      <pubDate>Wed, 06 Jun 2012 18:06:23 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="[ScienceNews]シリーズ防災・減災の科学　より早く、正確な緊急地震速報を！" src="http://tn-skr2.smilevideo.jp/smile?i=18022657" width="94" height="70" border="0"/></p>
+      <p class="nico-description">昨年の東日本大震災の後の余震で、緊急地震速報の誤報が頻発しました。現在の緊急地震速報の計算では複数の地点でほぼ同時に発生した地震を、ひとつの大きな地震と扱ってしまうことが原因です。京都大学防災研究所の山田真澄さんは気象庁と共同で、同時多発型の余震にも対応できる計算方法の開発に取り組んでいます。サイエンス チャンネル(ニコニコ チャンネル)はこちら　http://ch.nicovideo.jp/channel/sciencechannelサイエンス ニュースのホームページはこちら　http://sc-smn.jst.go.jp/top/index/news</p>
+      <p class="nico-info"><small><strong class="nico-info-length">5:00</strong>｜<strong class="nico-info-date">2012年06月06日 18：06：23</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>ネットワーク攻撃可視化・分析技術【攻殻とかのSF好き人向け】</title>
+      <link>http://www.nicovideo.jp/watch/sm11141346</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2010-06-21:/watch/sm11141346</guid>
+      <pubDate>Mon, 21 Jun 2010 21:05:36 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="ネットワーク攻撃可視化・分析技術【攻殻とかのSF好き人向け】" src="http://tn-skr3.smilevideo.jp/smile?i=11141346" width="94" height="70" border="0"/></p>
+      <p class="nico-description">ようつべから→　■ネットワーク攻撃可視化・分析技術 - nicter : DigInfo　http://www.youtube.com/watch?v=jLYs52OBh_A</p>
+      <p class="nico-info"><small><strong class="nico-info-length">3:13</strong>｜<strong class="nico-info-date">2010年06月21日 21：05：36</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>最新一眼レフのPVがカッコよすぎる件</title>
+      <link>http://www.nicovideo.jp/watch/sm18975875</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-09-26:/watch/sm18975875</guid>
+      <pubDate>Wed, 26 Sep 2012 00:21:21 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="最新一眼レフのPVがカッコよすぎる件" src="http://tn-skr4.smilevideo.jp/smile?i=18975875" width="94" height="70" border="0"/></p>
+      <p class="nico-description">YOU TUBE より転載http://www.youtube.com/watch?v=z1-BD9S08UQ&amp;feature=player_embeddedミラーレス持ってるけどやっぱり一眼レフが欲しいぉ！Nikon D600に期待(*∩∀∩*)ﾜｸﾜｸ♪</p>
+      <p class="nico-info"><small><strong class="nico-info-length">1:42</strong>｜<strong class="nico-info-date">2012年09月26日 00：21：21</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>都営地下鉄大江戸線12-600形のコックピットを観察してみた</title>
+      <link>http://www.nicovideo.jp/watch/sm19529206</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-12-08:/watch/sm19529206</guid>
+      <pubDate>Sat, 08 Dec 2012 04:15:44 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="都営地下鉄大江戸線12-600形のコックピットを観察してみた" src="http://tn-skr3.smilevideo.jp/smile?i=19529206" width="94" height="70" border="0"/></p>
+      <p class="nico-description">大江戸線はATO(自動列車運転装置)で運転しており、運転士がマスコンに手を触れなくても勝手に電車が減速、加速をやってくれるわけですね～　　ドアの開閉は運転士がやります。高画質で見たい方はこのURLへ　http://www.youtube.com/watch?v=an5_RXSzspw&amp;feature=youtu.be　チャンネル登録も宜しくね！</p>
+      <p class="nico-info"><small><strong class="nico-info-length">1:46</strong>｜<strong class="nico-info-date">2012年12月08日 04：15：44</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>BadApple.bat@cmd</title>
+      <link>http://www.nicovideo.jp/watch/sm20101084</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2013-02-16:/watch/sm20101084</guid>
+      <pubDate>Sat, 16 Feb 2013 05:09:11 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="BadApple.bat@cmd" src="http://tn-skr1.smilevideo.jp/smile?i=20101084" width="94" height="70" border="0"/></p>
+      <p class="nico-description">Bad Apple!!をコマンドプロンプトで再現してみたかった</p>
+      <p class="nico-info"><small><strong class="nico-info-length">19:56</strong>｜<strong class="nico-info-date">2013年02月16日 05：09：11</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>イカロス君のうた</title>
+      <link>http://www.nicovideo.jp/watch/sm17209563</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-03-10:/watch/sm17209563</guid>
+      <pubDate>Sat, 10 Mar 2012 18:07:57 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="イカロス君のうた" src="http://tn-skr4.smilevideo.jp/smile?i=17209563" width="94" height="70" border="0"/></p>
+      <p class="nico-description">公式サイトより転載監修/協力：IKAROSデモンストレーションチーム歌/セリフ：間宮くるみ歌詞：ゆうきよしなり作曲/編曲：真鍋旺嵩、中沢昭宏(from WEEAST)ディレクション/ミックス：安保一生イラスト/映像：みみみみドイツ http://www.jspec.jaxa.jp/ikaros_channel/bn019.html</p>
+      <p class="nico-info"><small><strong class="nico-info-length">4:19</strong>｜<strong class="nico-info-date">2012年03月10日 18：07：57</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>【日本の技術力】スパコンで復活する日本の翼【YS-11からMRJへ】</title>
+      <link>http://www.nicovideo.jp/watch/sm18748635</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-08-29:/watch/sm18748635</guid>
+      <pubDate>Wed, 29 Aug 2012 23:18:19 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="【日本の技術力】スパコンで復活する日本の翼【YS-11からMRJへ】" src="http://tn-skr4.smilevideo.jp/smile?i=18748635" width="94" height="70" border="0"/></p>
+      <p class="nico-description">2012年7月11日英国ハンプシャー州ファンボロー発『三菱航空機とスカイウェスト社、MRJ100機購入を基本合意』三菱航空機と米スカイウェスト社は、三菱リージョナルジェット（MRJ）100機の確定発注に向け両社間での基本合意に至ったと発表。スカイウェスト社は米国でリージョナルエアラインを2社保有する持ち株会社でリージョナル運航では世界最大を誇る。なお納入は2017年開始の予定。 MRJはこれまでに、全日空（ＡＮＡ）から25機、米ＴＳＨ社から100機、ANI Group Holdingsから5機を受注しており今回の基本合意後の受注確定によりMRJの合計受注機数は230機となる。（確定170機、オプション60機を含む）まだまだ途上ではあるけど、これは快挙でしょう。　で、そのＭＲＪ開発の陰にはスパコンの存在あり、と。</p>
+      <p class="nico-info"><small><strong class="nico-info-length">25:20</strong>｜<strong class="nico-info-date">2012年08月29日 23：18：19</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>【日本の技術力】 史上最高のアンテナを作った男達 【ALMA電波望遠鏡】</title>
+      <link>http://www.nicovideo.jp/watch/sm18169178</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-06-23:/watch/sm18169178</guid>
+      <pubDate>Sat, 23 Jun 2012 10:56:49 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="【日本の技術力】 史上最高のアンテナを作った男達 【ALMA電波望遠鏡】" src="http://tn-skr3.smilevideo.jp/smile?i=18169178" width="94" height="70" border="0"/></p>
+      <p class="nico-description">2012年6月12日、京都大学長尾准教授を中心とする国際研究チームは、アルマ望遠鏡を用いて124億光年彼方の「サブミリ波銀河」と呼ばれる種類の銀河から、窒素が放射する電波を検出することに成功したと発表した。その陰には、日本が世界に誇る１２ｍ／７ｍ電波望遠鏡と、その制作に携わった職人さん達の経験・技術の集約が在った。こ、これは文句無しにカッコええｗ　三菱電機㈱以下、制作に協力された企業（登場順）㈲田中鉄工所 オオタ㈱ 三是技研㈱ ㈱積進 天龍コンポジット㈱ ㈱姫島金属興業 ㈱小野鉄工所　うん、皆さん輝いてますｗアルマ天文台への設置までの苦労話 ⇒ sm15364226以上、オリジナルは ⇒ http://alma.mtk.nao.ac.jp/j/multimedia/movie/※本動画は画質を落とし前後篇を繋げたものです※</p>
+      <p class="nico-info"><small><strong class="nico-info-length">31:12</strong>｜<strong class="nico-info-date">2012年06月23日 10：56：49</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>ウミヘビロボット ACM-R5</title>
+      <link>http://www.nicovideo.jp/watch/sm658824</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2007-07-19:/watch/sm658824</guid>
+      <pubDate>Thu, 19 Jul 2007 20:54:35 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="ウミヘビロボット ACM-R5" src="http://tn-skr1.smilevideo.jp/smile?i=658824" width="94" height="70" border="0"/></p>
+      <p class="nico-description">衝撃を受けたので思わずYouTubeから転載。東京工業大の水陸両用ロボットです。どう考えても中にウナギか何か仕込んでるだろ……。</p>
+      <p class="nico-info"><small><strong class="nico-info-length">5:29</strong>｜<strong class="nico-info-date">2007年07月19日 20：54：35</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>[ScienceNews]下水処理技術でエネルギーを生み出す</title>
+      <link>http://www.nicovideo.jp/watch/so19509270</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-12-05:/watch/so19509270</guid>
+      <pubDate>Wed, 05 Dec 2012 14:03:35 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="[ScienceNews]下水処理技術でエネルギーを生み出す" src="http://tn-skr3.smilevideo.jp/smile?i=19509270" width="94" height="70" border="0"/></p>
+      <p class="nico-description">神戸市では「消化ガス」という下水処理の過程で発生する汚泥を微生物によって発酵させてできたガスを地域のエネルギーとして利用しています。また地盤産業である食品工場の廃棄物や六甲山の間伐材などをガスの原料とする「KOBEグリーン・スイーツプロジェクト」も行われています。こうした日本の高度な下水処理技術（再生技術）は世界からも注目されています。―5分で観る、科学技術の最新動画ニュース―サイエンスニュースとは、日本の科学技術分野にとって重要なニュースまたはタイムリーな情報を動画でお届けするWEBサイトです。最先端の科学技術情報から生活に密着した話題まで、厳選された情報を発信します。http://sc-smn.jst.go.jp/top/index/newsサイエンスニュース／サイエンスチャンネルについて詳しくはこちらをご覧ください。http://sc-smn.jst.go.jp/stc/page/_whathttp://tsunagaru.jst.go.jp/tos/ニコニコチャンネルのサイエンスチャンネルはこちらhttp://ch.nicovideo.jp/channel/sciencechannel</p>
+      <p class="nico-info"><small><strong class="nico-info-length">5:00</strong>｜<strong class="nico-info-date">2012年12月05日 14：03：35</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>デザイン「あ」のテーマであそぼ　より</title>
+      <link>http://www.nicovideo.jp/watch/sm16644042</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-01-08:/watch/sm16644042</guid>
+      <pubDate>Sun, 08 Jan 2012 20:40:52 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="デザイン「あ」のテーマであそぼ　より" src="http://tn-skr3.smilevideo.jp/smile?i=16644042" width="94" height="70" border="0"/></p>
+      <p class="nico-description">ＮＨＫＥテレ「デザインあ」のホームページよりデザイン「あ」のテーマ　「あ」と書くと、「あ」が動き出します　癖になりそう～な歌なんだよなー　詳しくは　http://www.nhk.or.jp/design-ah/　</p>
+      <p class="nico-info"><small><strong class="nico-info-length">2:12</strong>｜<strong class="nico-info-date">2012年01月08日 20：40：52</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>【トヨタ始まる】世界最小３輪ハイブリッド「MINUTE-S」を作ってみますた</title>
+      <link>http://www.nicovideo.jp/watch/sm19539633</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-12-09:/watch/sm19539633</guid>
+      <pubDate>Sun, 09 Dec 2012 14:07:47 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="【トヨタ始まる】世界最小３輪ハイブリッド「MINUTE-S」を作ってみますた" src="http://tn-skr2.smilevideo.jp/smile?i=19539633" width="94" height="70" border="0"/></p>
+      <p class="nico-description">2012年9月23日(日)トヨタスポーツセンターでトヨタ技術会主催【TESフェスティバル2012】が開催された。TESフェスは、参加して、造って、乗って、感じて、クルマを楽しむイベント。そこでトヨタが満を持して発表したのが、世界最小の一人乗り３輪ハイブリッドスポーツカー ＭＩＮＵＴＥ－Ｓ である。スペック？　ゴメン、知らないwとは言うものの、より詳しくは　http://ja-jp.facebook.com/555TES　で。　なんか色々と凄そう。　面白そう。８６ではスバルと手を組み、コレではヤマハとのコラボとか・・・　うん、トヨタもやる時ゃやるって話。</p>
+      <p class="nico-info"><small><strong class="nico-info-length">2:06</strong>｜<strong class="nico-info-date">2012年12月09日 14：07：47</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>【ホンダ始まる】N-ONE ペーパークラフトを作ってみないか？実物大だけど</title>
+      <link>http://www.nicovideo.jp/watch/sm19237917</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-10-30:/watch/sm19237917</guid>
+      <pubDate>Tue, 30 Oct 2012 11:28:36 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="【ホンダ始まる】N-ONE ペーパークラフトを作ってみないか？実物大だけど" src="http://tn-skr2.smilevideo.jp/smile?i=19237917" width="94" height="70" border="0"/></p>
+      <p class="nico-description">N-ONEをそのまま再現した、ペーパークラフトの常識を変える原寸大モデル！かつてない&quot;つくりごたえ&quot;の1台が、N-ONEのデザインの魅力を伝えます。サイズはおよそ : 全長3,395mm 全幅1,475mm 全高1,605mm ！展開図、説明書は http://www.honda.co.jp/N/craft/ からダウンロードできます。　が、　　※ 組み立てにはかなりの時間がかかります。（５人で１日７時間、１０日は掛かるらしい）　　※ 事前に制作およびディスプレイするスペースをご確認ください。　　※ 展開図の出力には業務用の大型出力機が必要です。　　※ 軽い気持ちでの製作はおひかえください。だってよ？　ってか作らせる気、まったく無いだろコレｗｗｗ</p>
+      <p class="nico-info"><small><strong class="nico-info-length">2:25</strong>｜<strong class="nico-info-date">2012年10月30日 11：28：36</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>特ダネ！投稿DO画「発見！光で動かす技術」</title>
+      <link>http://www.nicovideo.jp/watch/so19939169</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2013-01-29:/watch/so19939169</guid>
+      <pubDate>Tue, 29 Jan 2013 11:56:00 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="特ダネ！投稿DO画「発見！光で動かす技術」" src="http://tn-skr2.smilevideo.jp/smile?i=19939169" width="94" height="70" border="0"/></p>
+      <p class="nico-description">たまたまその場所にいたから撮影できた「偶然のスクープ」、日常生活のなかの「小さな発見」。視聴者のみなさんの投稿やインターネット上の動画でつくる情報番組です！今回は、番組ホームページに寄せられたスクープ映像。光をあてるだけで円盤を動かすその技術に世界の科学者から熱いまなざしが寄せられています。番組HPはこちら「http://doga.nhk.or.jp/doga/」</p>
+      <p class="nico-info"><small><strong class="nico-info-length">2:38</strong>｜<strong class="nico-info-date">2013年01月29日 11：56：00</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>VVVF搭載洗濯機(インバーターノイズのラジオ録音)</title>
+      <link>http://www.nicovideo.jp/watch/sm13335256</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2011-01-17:/watch/sm13335256</guid>
+      <pubDate>Mon, 17 Jan 2011 20:09:02 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="VVVF搭載洗濯機(インバーターノイズのラジオ録音)" src="http://tn-skr1.smilevideo.jp/smile?i=13335256" width="94" height="70" border="0"/></p>
+      <p class="nico-description">sm13233430を見て思いついた。去年10月に購入した新品の洗濯機。もちろんVVVF搭載！いい音出てます。最近の洗濯機はVVVF搭載で静かですね。洗濯機の機種:TOSHIBA ZABOON TW-Z9000L使用ラジオ機器:バーテックス・スタンダード VR-150周波数:550Khz帯 受信モード:AM同じくインバーター制御洗濯機でラジオ録音してる方：sm14318517自転車でVVVFインバータ搭載電車の真似：sm3341654電車のVVVFをラジオ録音している方：sm13255737 sm5647099 sm5117128 sm5057055　sm1342554その他ラジオ録音については「VVVFラジオ録音」でタグ検索してください。次回ラジオ録音するインバーター:アルファードハイブリッドのハイブリッドインバーター</p>
+      <p class="nico-info"><small><strong class="nico-info-length">2:58</strong>｜<strong class="nico-info-date">2011年01月17日 20：09：02</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>【日本の技術力】 あらゆる災害に強い理想の住まいを 【NWPCの百年住宅】</title>
+      <link>http://www.nicovideo.jp/watch/sm18413093</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-07-22:/watch/sm18413093</guid>
+      <pubDate>Sun, 22 Jul 2012 09:43:35 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="【日本の技術力】 あらゆる災害に強い理想の住まいを 【NWPCの百年住宅】" src="http://tn-skr2.smilevideo.jp/smile?i=18413093" width="94" height="70" border="0"/></p>
+      <p class="nico-description">1955年、官民が一体となり地震・火災に強いＰＣ工法の開発がスタートした。以来半世紀、百年住宅(株)は「あらゆる災害」に強い住宅へと進化させるべくＷＰＣ、ＮＷＰＣを独自に開発。東日本大震災直後の昨年4月1日には業界初となるＭ９・０の巨大地震までをもカバーする３５年地震保証を開始した。⇒　http://www.wpc100.co.jp/index.html　これもまた日本企業ならではの姿勢だと思う。なお我が国では2006年に「住生活基本法」を制定。住宅の流通、建設、金融、維持管理、街並みの分野において「２００年住宅」に向け具体的な施策を推進する、としている。でも今は民主党政権だからねｗ　今の日本で信頼に足るのは官より民の方かも。◆購入者の感想部分は実名らしいのでカットしてます◆</p>
+      <p class="nico-info"><small><strong class="nico-info-length">21:02</strong>｜<strong class="nico-info-date">2012年07月22日 09：43：35</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>タッチパッドDJ</title>
+      <link>http://www.nicovideo.jp/watch/sm15385506</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2011-08-22:/watch/sm15385506</guid>
+      <pubDate>Mon, 22 Aug 2011 17:03:55 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="タッチパッドDJ" src="http://tn-skr3.smilevideo.jp/smile?i=15385506" width="94" height="70" border="0"/></p>
+      <p class="nico-description">is01とzero8</p>
+      <p class="nico-info"><small><strong class="nico-info-length">0:40</strong>｜<strong class="nico-info-date">2011年08月22日 17：03：55</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>【日本の技術力】航空立国日本再興なるか【東京大学の挑戦】</title>
+      <link>http://www.nicovideo.jp/watch/sm19111178</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-10-15:/watch/sm19111178</guid>
+      <pubDate>Mon, 15 Oct 2012 17:18:00 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="【日本の技術力】航空立国日本再興なるか【東京大学の挑戦】" src="http://tn-skr3.smilevideo.jp/smile?i=19111178" width="94" height="70" border="0"/></p>
+      <p class="nico-description">【以下、動画解説より】日本は航空機生産において高い技術力を持ちながら、YS-11型機以来、旅客機の生産が行われていませんでしたが、最近の三菱航空機によるMRJ開発などに象徴される様に、再び旅客機を空へという気運が高まっています。そんな中、東京大学教授の鈴木真二さんらのグループはアクシデントが起った時にも安全に飛行を継続できる自律制御システムの開発に成功。米軍に次いで民間航空機用のシステムとしては世界初の成果となりました。MRJに続く次の次の世代の国産旅客機開発を見据えた鈴木さんらの研究を取材しました。東大に批判的なコメが多いねーｗ　気持ちは解かるけど、そこはそれ是々非々でｗこうした自律制御技術が、いずれは我が国の安全保障の要にも繋がると信じつつさ。</p>
+      <p class="nico-info"><small><strong class="nico-info-length">5:01</strong>｜<strong class="nico-info-date">2012年10月15日 17：18：00</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>外国人刀匠による日本刀製作</title>
+      <link>http://www.nicovideo.jp/watch/sm8340953</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2009-09-26:/watch/sm8340953</guid>
+      <pubDate>Sat, 26 Sep 2009 09:23:01 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="外国人刀匠による日本刀製作" src="http://tn-skr2.smilevideo.jp/smile?i=8340953" width="94" height="70" border="0"/></p>
+      <p class="nico-description">youtubeより転載http://www.youtube.com/watch?v=4YssvU2BU4E刀匠のHPhttp://www.sukemitsu.com/homemylist/3929639</p>
+      <p class="nico-info"><small><strong class="nico-info-length">7:40</strong>｜<strong class="nico-info-date">2009年09月26日 09：23：01</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>本田雄　ＭＡＤ</title>
+      <link>http://www.nicovideo.jp/watch/sm2436112</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2008-02-25:/watch/sm2436112</guid>
+      <pubDate>Mon, 25 Feb 2008 23:07:12 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="本田雄　ＭＡＤ" src="http://tn-skr1.smilevideo.jp/smile?i=2436112" width="94" height="70" border="0"/></p>
+      <p class="nico-description">アニメーター本田雄さんの作画集。</p>
+      <p class="nico-info"><small><strong class="nico-info-length">4:21</strong>｜<strong class="nico-info-date">2008年02月25日 23：07：12</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>【この世界が凄ぇ】抱腹絶倒！ロボットサッカーＷＣ 【RoboCup 2012】</title>
+      <link>http://www.nicovideo.jp/watch/sm18253456</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-07-03:/watch/sm18253456</guid>
+      <pubDate>Tue, 03 Jul 2012 03:45:02 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="【この世界が凄ぇ】抱腹絶倒！ロボットサッカーＷＣ 【RoboCup 2012】" src="http://tn-skr1.smilevideo.jp/smile?i=18253456" width="94" height="70" border="0"/></p>
+      <p class="nico-description">二足歩行自律型ロボットたちの動きがパねぇ！ｗロボットサッカーＷＣ【RoboCup】のカテゴリ４種の決勝戦を、例によって画質を落とし繋げてみたんだけど、これを観れば自律型ロボットの制御技術もついにここまで来たかって感動出来るはず。 か、または腹筋崩壊ｗ【収録内容】00:00～ スタンダード・プラットフォーム（標準機）決勝 アメリカ対ドイツ06:52～ キッズサイズ（身長30cm以上60cm以下）決勝 アメリカ対日本14:14～ ティーンサイズ（身長100cm以上180cm未満）決勝 ドイツ対日本20:47～ ミドルサイズ（二足歩行では無い中型機）決勝 オランダ対イラン　←凄いゲームです。必見！他のカテゴリや試合を高画質で観たい方は、つべにて「RoboCup 2012」で検索</p>
+      <p class="nico-info"><small><strong class="nico-info-length">24:19</strong>｜<strong class="nico-info-date">2012年07月03日 03：45：02</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>驚愕！アリの巣に熱々に溶かしたアルミを流し込む！！</title>
+      <link>http://www.nicovideo.jp/watch/sm14652615</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2011-06-05:/watch/sm14652615</guid>
+      <pubDate>Sun, 05 Jun 2011 02:32:49 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="驚愕！アリの巣に熱々に溶かしたアルミを流し込む！！" src="http://tn-skr4.smilevideo.jp/smile?i=14652615" width="94" height="70" border="0"/></p>
+      <p class="nico-description">youtubeより転載。アリ好きの方、視聴注意。子供の頃にアリの巣に水を流し込んだり、アリジコクにアリを入れたりして遊んだのは俺だけじゃないはず。6/6追記再生数１０００突破！コメント、マイリス、タグ編集してくれた方々、アリがとうございます！</p>
+      <p class="nico-info"><small><strong class="nico-info-length">3:49</strong>｜<strong class="nico-info-date">2011年06月05日 02：32：49</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>新・キックバイブル</title>
+      <link>http://www.nicovideo.jp/watch/sm3484682</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2008-05-29:/watch/sm3484682</guid>
+      <pubDate>Thu, 29 May 2008 22:57:06 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="新・キックバイブル" src="http://tn-skr3.smilevideo.jp/smile?i=3484682" width="94" height="70" border="0"/></p>
+      <p class="nico-description">中西哲生による解説DVD</p>
+      <p class="nico-info"><small><strong class="nico-info-length">13:14</strong>｜<strong class="nico-info-date">2008年05月29日 22：57：06</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>あなたの差し歯はこんなふうに作ってますよ。プレスジルコニア編</title>
+      <link>http://www.nicovideo.jp/watch/sm8859577</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2009-11-20:/watch/sm8859577</guid>
+      <pubDate>Fri, 20 Nov 2009 12:57:50 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="あなたの差し歯はこんなふうに作ってますよ。プレスジルコニア編" src="http://tn-skr2.smilevideo.jp/smile?i=8859577" width="94" height="70" border="0"/></p>
+      <p class="nico-description">ジルコニアフレームにセラミックスをプレスして作るオールセラミックスの製作手順です。なかなか綺麗に仕上がりますよ。http://www.teinesha.com</p>
+      <p class="nico-info"><small><strong class="nico-info-length">8:38</strong>｜<strong class="nico-info-date">2009年11月20日 12：57：50</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>Cursive Notepad 筆記体メモ</title>
+      <link>http://www.nicovideo.jp/watch/sm14550947</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2011-05-25:/watch/sm14550947</guid>
+      <pubDate>Wed, 25 May 2011 01:51:00 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="Cursive Notepad 筆記体メモ" src="http://tn-skr4.smilevideo.jp/smile?i=14550947" width="94" height="70" border="0"/></p>
+      <p class="nico-description">iPhone / iPad touch App iTunesStoreCan you write &quot;Cursive English&quot; ?“Cursive Notepad” is a MEMO with &quot;handwriting recognition&quot;.『あなた、英語の筆記体、書けますか？』「筆記体メモ」は筆記体の手書き文字認識メモ帳アプリです。</p>
+      <p class="nico-info"><small><strong class="nico-info-length">1:29</strong>｜<strong class="nico-info-date">2011年05月25日 01：51：00</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>CPLDでつくるフレームバッファ</title>
+      <link>http://www.nicovideo.jp/watch/sm2999516</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2008-04-15:/watch/sm2999516</guid>
+      <pubDate>Tue, 15 Apr 2008 01:49:13 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="CPLDでつくるフレームバッファ" src="http://tn-skr1.smilevideo.jp/smile?i=2999516" width="94" height="70" border="0"/></p>
+      <p class="nico-description">● 秋月300円液晶シリーズ第2弾。秋月300円液晶シリーズ第1弾→sm2914331 第3弾→sm3806028 第4弾→sm6008956 うp主の投稿動画一覧→myvideo/6237327● C73で頒布の液晶駆動モジュール「TURQUOISE」の製作ダイジェストです。ジクロロメタンはフラックス洗浄剤の主成分。換気に注意。● 動画コーデックは独自開発のオリジナル。今回はV850ESの性能限界で10fpsでの再生。音声トラックもありますが、都合で音は編集合成。● 資料はこちら→ http://www001.upp.so-net.ne.jp/syrius/pld/turquoise/turquoise.html● １０万再生ありがとうございます :-)● この製品は生産終了となりました。以降は後継機種「TOURMALINE(sm6008956)」をご利用ください。● 高画質版をうｐしました→sm8975758</p>
+      <p class="nico-info"><small><strong class="nico-info-length">9:36</strong>｜<strong class="nico-info-date">2008年04月15日 01：49：13</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>100年後の未来</title>
+      <link>http://www.nicovideo.jp/watch/sm17218105</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-03-11:/watch/sm17218105</guid>
+      <pubDate>Sun, 11 Mar 2012 13:25:15 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="100年後の未来" src="http://tn-skr2.smilevideo.jp/smile?i=17218105" width="94" height="70" border="0"/></p>
+      <p class="nico-description">惑星間飛行を体験してみたい。mylist/27313761</p>
+      <p class="nico-info"><small><strong class="nico-info-length">6:53</strong>｜<strong class="nico-info-date">2012年03月11日 13：25：15</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>【米国の技術力】 技術革新と共にあった人々 【IBM創立100周年ﾌｨﾙﾑ】</title>
+      <link>http://www.nicovideo.jp/watch/sm18398886</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-07-20:/watch/sm18398886</guid>
+      <pubDate>Fri, 20 Jul 2012 21:00:00 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="【米国の技術力】 技術革新と共にあった人々 【IBM創立100周年ﾌｨﾙﾑ】" src="http://tn-skr3.smilevideo.jp/smile?i=18398886" width="94" height="70" border="0"/></p>
+      <p class="nico-description">ＩＢＭ「セコイア」に首位の座を奪われたスパコン。ＩＢＭはいまだ巨人である。だからこそ倒し甲斐のある相手なのだ。頑張れ、日本！収録エピソード全９編。流石だわＩＢＭ。①01:25「私たちはすべてを賭けたのです」IBM360②04:48「誰も解決できない複雑な問題でした」SABRE座席予約システム③08:37「ＩＢＭはまさに前例となったのです」企業理念№４④11:31「この仕事は困難を極めました」UPCバーコード⑤14:25「全員が一丸となったのです」アポロ計画⑥18:46「世界が小さくなったのです」IBM PC⑦21:54「将来、画一的な世界は消滅します」ジェノグラフィック計画⑧24:36「発明が私たちの仕事です」価値ある革新⑨27:54「企業が必要としているのは、人々が『考える』ことです」</p>
+      <p class="nico-info"><small><strong class="nico-info-length">30:38</strong>｜<strong class="nico-info-date">2012年07月20日 21：00：00</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>巨大環境テクノロジー パワー・タワー [2of4]</title>
+      <link>http://www.nicovideo.jp/watch/sm4027960</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2008-07-21:/watch/sm4027960</guid>
+      <pubDate>Mon, 21 Jul 2008 04:17:59 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="巨大環境テクノロジー パワー・タワー [2of4]" src="http://tn-skr1.smilevideo.jp/smile?i=4027960" width="94" height="70" border="0"/></p>
+      <p class="nico-description">世界初の、巨大な風力発電ブレードを備えた高層ビル1of4→sm40278353of4→sm40280384of4→sm4028115</p>
+      <p class="nico-info"><small><strong class="nico-info-length">11:54</strong>｜<strong class="nico-info-date">2008年07月21日 04：17：59</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>セカイのでっかいマシン大集合</title>
+      <link>http://www.nicovideo.jp/watch/sm14424156</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2011-05-11:/watch/sm14424156</guid>
+      <pubDate>Wed, 11 May 2011 19:10:24 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="セカイのでっかいマシン大集合" src="http://tn-skr1.smilevideo.jp/smile?i=14424156" width="94" height="70" border="0"/></p>
+      <p class="nico-description">でっかい乗り物や機械をいくつか勢いで集めてみました。ソース選択や編集の雑加減は容赦願います。</p>
+      <p class="nico-info"><small><strong class="nico-info-length">3:22</strong>｜<strong class="nico-info-date">2011年05月11日 19：10：24</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>SaaS職人 for VY1V3</title>
+      <link>http://www.nicovideo.jp/watch/sm18281184</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2012-07-06:/watch/sm18281184</guid>
+      <pubDate>Fri, 06 Jul 2012 22:33:32 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="SaaS職人 for VY1V3" src="http://tn-skr1.smilevideo.jp/smile?i=18281184" width="94" height="70" border="0"/></p>
+      <p class="nico-description">クラウドに対抗してソフトウェアサービスを作り、実装する技術者たちの職人芸を讃えて</p>
+      <p class="nico-info"><small><strong class="nico-info-length">5:19</strong>｜<strong class="nico-info-date">2012年07月06日 22：33：32</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+    <item>
+      <title>〈ＳＯ新作フラグ〉　トライエース　映像技術　デモトレーラー</title>
+      <link>http://www.nicovideo.jp/watch/sm14227191</link>
+      <guid isPermaLink="false">tag:nicovideo.jp,2011-04-22:/watch/sm14227191</guid>
+      <pubDate>Fri, 22 Apr 2011 10:31:00 +0900</pubDate>
+      <description><![CDATA[
+      <p class="nico-thumbnail"><img alt="〈ＳＯ新作フラグ〉　トライエース　映像技術　デモトレーラー" src="http://tn-skr4.smilevideo.jp/smile?i=14227191" width="94" height="70" border="0"/></p>
+      <p class="nico-description">ＹＯＵＴＵＢＥ　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　ｔｒｉ―Ａｃｅ　Ｔｅｃｈｎｉｃａｌ　Ｄｅｍｏ　Ｔｒａｉｌｅｒ　２０１１　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　＿Ｐｈｙｓｉｃａｌｌｙ―ｂａｓｅｄ　Ｒｅｎｄｅｒｉｎｇ　ｖｅｒｓｉｏｎ　０．１＿</p>
+      <p class="nico-info"><small><strong class="nico-info-length">2:10</strong>｜<strong class="nico-info-date">2011年04月22日 10：31：00</strong> 投稿</small></p>
+      ]]></description>
+    </item>
+
+  </channel>
+
+</rss>
