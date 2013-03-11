@@ -5,7 +5,7 @@ require "webmock/rspec"
 WebMock.allow_net_connect!
 
 describe "Feedクラス" do
-  before(:each) {
+  before(:all) {
     @feed1 = setup_feed1
     @feed2 = setup_feed2
     @feed3 = setup_feed3
