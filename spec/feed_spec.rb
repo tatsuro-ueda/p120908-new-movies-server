@@ -5,49 +5,59 @@ require "webmock/rspec"
 WebMock.allow_net_connect!
 
 describe "Feedクラス" do
-  before(:all) {
+  before(:each) {
     @feed1 = setup_feed1
     @feed2 = setup_feed2
     @feed3 = setup_feed3
     @feed4 = setup_feed_vimeo
   }
   context "サンプルフィードを取得するとき" do
+    before {
+      @feed1_length = @feed1.items.length
+      @feed2_length = @feed2.items.length
+      @feed3_length = @feed3.items.length
+      @feed4_length = @feed4.items.length
+    }
     it "1つ以上の要素を持った配列オブジェクトが生成される" do
-      puts "example_1"
-      puts [@feed1, @feed2, @feed3, @feed4].map{|f| f.items.length}
-      @feed1.items.length.should > 0
-      @feed2.items.length.should > 0
-      @feed3.items.length.should > 0
-      @feed4.items.length.should > 0
+      debug 1
+      @feed1_length.should > 0
+      @feed2_length.should > 0
+      @feed3_length.should > 0
+      @feed4_length.should > 0
     end
     it "配列オブジェクトの要素数は5である" do
-      @feed1.items.length.should == 5
-      @feed2.items.length.should == 5
-      @feed3.items.length.should == 5
-      @feed4.items.length.should == 5
+      debug 2
+      @feed1_length.should == 5
+      @feed2_length.should == 5
+      @feed3_length.should == 5
+      @feed4_length.should == 5
     end
   end
   describe "#append" do
-    context "@feed1の長さは5、@feed3の長さは2のとき、それらをappendしたfeedの長さ" do
+    context "長さ5の@feed1に長さ5の@feed3を#appendしたとき、返るfeed" do
       before {@result = @feed1.append(@feed3)}
       subject {@result}
-      it{should have(10).items}
-#        subject.items.length.should == 7
-#      end
+      it{
+        debug 3
+        should have(10).items
+      }
     end
   end
   describe "#unique" do
     before {
-      p @feed1.items.length
+      debug 4
     }
     it "#unique：重複する項目を除去する" do
+      debug 5
       @feed1.append(@feed1).unique.items.length.should == 5
     end
   end
   it "#truncate：項目数を制限する" do
+    debug 6
     @feed1.append(@feed2).truncate(5).items.length.should == 5
   end
   it "#regex：内容を置換する" do
+    debug 7
     @feed2.regex([
       {:find => /<p class="nico-thumbnail"><img alt=".*\n/,
       :replace => ''},
@@ -60,9 +70,15 @@ describe "Feedクラス" do
     ]).items.length.should == 5
   end
   it "#filter：キーワードを含むフィードを返す" do
+    debug 8
     @feed3.filter({
       'title' => ["プロジェクト", "IT", "ニュース"],
       'link' => ["itmedia", "yomiuri", "mainichi"]
     }).items.length.should > 0
   end
+end
+
+def debug id
+  puts "example_" + id.to_s
+  puts [@feed1, @feed2, @feed3, @feed4].map{|f| f.items.length}
 end
