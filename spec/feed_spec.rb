@@ -13,6 +13,8 @@ describe "Feedクラス" do
   }
   context "サンプルフィードを取得するとき" do
     it "1つ以上の要素を持った配列オブジェクトが生成される" do
+      puts "example_1"
+      puts [@feed1, @feed2, @feed3, @feed4].map{|f| f.items.length}
       @feed1.items.length.should > 0
       @feed2.items.length.should > 0
       @feed3.items.length.should > 0
